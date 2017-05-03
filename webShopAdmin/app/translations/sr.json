@@ -1,0 +1,44 @@
+﻿{
+  "USER": {
+    "USERNAME": "Korisničko ime",
+    "PASSWORD": "Korisnička šifra",
+    "PASSWORDCONFIRM": "Potvrda šifre",
+    "PASSWORDSTRENGTH": "Jačina šifre",
+    "LOGIN": "Prijava",
+    "SETTINGS": "Korisnička podešavanja",
+    "SINGULAR": "Korisnik",
+    "PLURAL": "Korisnici",
+    "ROLE": "Tip",
+    "EMAIL": "Email",
+    "FIRSTNAME": "Ime",
+    "LASTNAME": "Prezime"
+  },
+  "COMPANY": { "PLURAL": "Firma" },
+  "CODEBOOKS": "Šifarnici",
+  "ACTIVE": "Aktivan",
+  "ADDNEWITEM": "Dodaj",
+  "SORTBYID": "Sortiraj po unosu",
+  "DELETEITEM": "Obriši",
+  "HELP": "Pomoć",
+  "SEARCH": "Pretraga",
+  "CLEARSEARCH": "Poništi pretragu",
+  "ACTION": {
+    "SAVE": "Sačuvaj",
+    "CLOSE": "Zatvori"
+  },
+  "CLOSE": "Zatvori",
+  "MAINDATA": "Osnovni podaci",
+  "FIRSTPAGE": "Prva strana",
+  "EXTRADATA": "Extra podaci",
+  "CATEGORY": {
+    "SINGULAR": "Kategorija",
+    "PLURAL": "Kategorije",
+    "PARENT": "Nadkategorija"
+  },
+  "ATTRIBUTE": {
+    "SINGULAR": "Atribut",
+    "PLURAL": "Atributi"
+  },
+  "NAME": "Naziv",
+  "VALIDATION": {"REQUIRED": "Podatak je obavezan"}
+}

@@ -1,0 +1,132 @@
+﻿//TopMenu
+.top-menu{
+	background-color:@brand-primary;
+	padding:0 32px 0 0;
+	position:fixed;
+	z-index:999;
+	box-shadow:2px 0px 3px rgba(0,0,0,0.5);
+	height:50px;
+	width:100%;
+	min-width:320px;
+    color:darken(@brand-primary, 40%);
+
+	a{
+		color:darken(@brand-primary, 40%);
+		cursor:pointer;
+	}
+
+	a:hover{
+		//color:#eee;
+	}
+
+	.fa{
+		
+	}
+
+	ul.dropdown-menu{
+		//min-width:0 !important;
+		right:0;
+		left:auto;
+		animation: fadein 0.2s;
+		li{
+			a{
+				//color:#777;
+			}
+		}
+	}
+
+	.user-profile{
+		float:right;
+		//min-width:230px;
+
+		.user-profile-dropdown{
+			float:right;
+			margin-right:10px;
+			//width:36px;
+			//height:36px;
+			position:relative;
+
+			
+		}
+	}
+	
+	.logo{
+		//color:darken(@brand-primary, 40%);
+		display:block;
+		font-size:1em;
+		float:left;
+		font-weight:bold;
+		padding-top:0.4em;
+		background-color:@brand-primary;
+		height:50px;
+		width:200px;
+		text-align:center;
+
+		span{
+			//color:darken(@brand-primary, 40%);
+		}
+
+        img{
+            max-height:40px;
+        }
+	}
+
+	.dropdown{
+		a.dropdown-toggle{
+				margin-top:0.5em;
+				display:block;
+				font-size:1.5em;
+			}
+
+		.dropdown-arrow{
+			position:absolute;
+			top:-22px;
+			right:5px;
+			display:block;
+			width:0;
+			height:0;
+			border:11px solid transparent;
+			border-bottom-color:rgba(0,0,0,0.15);
+		}
+
+		.dropdown-arrow:after{
+			top:-9px;
+			left:0;
+			margin-left:-10px;
+			content: " ";
+			position:absolute;
+			display:block;
+			width:0;
+			height:0;
+			border:10px solid transparent;
+			border-bottom-color:#fff;
+		}
+	}
+
+	.settings{
+		float:right;
+		//min-width:230px;
+		
+		.settings-dropdown{
+			float:right;
+			margin-right:10px;
+			position:relative;
+		}
+	}
+
+	.menu-collapse-toggle{
+		font-size:1.5em;
+		display:inline-block;
+		padding-top:0.2em;
+		float:left;
+		width:52px;
+		text-align:center;
+	}
+	.user-info {
+		float:right;
+		margin-right: 20px;
+		//color: #fff;
+		font-size:1.2em;
+        margin-top:15px;
+	}
+}

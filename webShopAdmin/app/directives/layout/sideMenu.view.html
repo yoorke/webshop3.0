@@ -1,0 +1,35 @@
+﻿<aside class="side-menu" ng-swipe-left="setMenuCollapsed(true)" ng-swipe-right="setMenuCollapsed(false)" ng-mouseleave="hoverElementTop=-150" ng-show="userAuthenticated">
+    <ul class="side-menu-list">
+        <li class="side-menu-list-item" ng-repeat="item in items" ng-class="{'has-submenu': item.SubMenu, 'side-menu-list-item-expanded': !item.collapseSubMenu}" ng-init="item.collapseSubMenu=true">
+            
+            <a class="side-menu-list-link" ng-href="#{{item.Url}}" ng-if="item.SubMenu == null && item.Type == 0" ng-mouseenter="hoverItem($event, item)">
+                <i class="fa {{item.Icon}}"></i>
+                <span>{{item.Name}}</span>
+                {{item.SubMenu}}
+            </a>
+
+            <a class="side-menu-list-link" ng-href="" ng-if="item.SubMenu == null && item.Type == 1" ng-mouseenter="hoverItem($event, item)" ng-click="setModal(item.Url)">
+                <i class="fa {{item.Icon}}"></i>
+                <span>{{item.Name}}</span>
+            </a>
+
+            <a class="side-menu-list-link" ng-if="item.SubMenu != null" ng-click="item.collapseSubMenu = !item.collapseSubMenu" ng-mouseenter="hoverItem($event, item)">
+                <i class="fa {{item.Icon}}"></i>
+                <span>{{item.Name}}</span>
+                <b class="fa fa-angle-down" ng-if="item.SubMenu != null"></b>
+            </a>
+
+            <ul ng-if="item.SubMenu != null" class="side-menu-submenu-list" uib-collapse="item.collapseSubMenu">
+                <li ng-repeat="subitem in item.SubMenu" class="side-menu-submenu-item">
+                    <a class="side-menu-submenu-link" ng-if="subitem.SubMenu == null && subitem.Type == 0" ng-href="{{subitem.Url}}" ng-mouseenter="hoverItem($event, item)" ng-class="{'hr-after': subitem.HrAfter}">
+                        <span>{{subitem.Name}}</span>
+                    </a>
+                    <a class="side-menu-submenu-link" ng-if="subitem.SubMenu == null && subitem.Type == 1" ng-href="" ng-click="setModal(subitem.Url)" ng-mouseenter="hoverItem($event, item)" ng-class="{'hr-after': subitem.HrAfter}">
+                        <span>{{subitem.Name}}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="sidemenu-hover-element" ng-style="{top: hoverElementTop + 'px', height: hoverElementHeight + 'px'}" ng-class="{'show-hover-element': showHoverElement}"></div>
+</aside>

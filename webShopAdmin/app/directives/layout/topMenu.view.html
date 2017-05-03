@@ -1,0 +1,81 @@
+﻿<div class="top-menu clearfix">
+    <a href="" class="menu-collapse-toggle" ng-click="vm.ToggleMenuCollapsed()" ng-if="vm.userAuthenticated">
+        <span class="fa fa-fw fa-bars"></span>
+    </a>
+    <a href="#/" class="logo">
+        <img src="app/images/webshopadminlogo.png" />
+        <span>WebShop3.0 Admin</span>
+    </a>    
+    
+
+    <div class="user-profile clearfix" ng-if="vm.userAuthenticated">
+        <!--<div class="row">
+            <span>{{vm.lastName+' '+vm.firstName}}</span>
+        </div>-->
+        <div uib-dropdown class="dropdown user-profile-dropdown">
+            
+            <a uib-dropdown-toggle id="btnUserProfileDropDown" class="dropdown-toggle"><span class="fa fa-fw fa-user"></span></a>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="btnUserProfileDropDown">
+                <li>
+                    <i class="dropdown-arrow"></i>
+                </li>
+                <!--<li>
+                    <a href="#/profile">
+                        <i class="fa fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="#/profileSettings">
+                        <i class="fa fa-cog"></i>
+                        <span translate="USER.SETTINGS"></span>
+                    </a>
+                </li>
+                <li ng-show="vm.roleID==1 || vm.roleID==2">
+                    <a href="#/users">
+                        <i class="fa fa-cog"></i>
+                        <span translate="USER.PLURAL"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/login">
+                        <i class="fa fa-power-off"></i>
+                        <span>Log out</span>
+                    </a>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="settings clearfix" ng-if="vm.userAuthenticated">
+        <div uib-dropdown class="dropdown settings-dropdown">
+            <a uib-dropdown-toggle id="btnSettingsDropdown" class="dropdown-toggle"><span class="fa fa-fw fa-cogs"></span></a>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="btnSettingsDropdown">
+                <li>
+                    <i class="dropdown-arrow"></i>
+                </li>
+                <!--<li>
+                    <a href="#/companySettings">
+                        <i class="fa fa-cog"></i>
+                        <span translate="COMPANY.SETTINGS"></span>
+                    </a>
+                </li>-->
+                <li>
+                    <a href="#/company" ng-show="vm.roleID==1 || vm.roleID==2">
+                        <i class="fa fa-cog"></i>
+                        <span translate="COMPANY.PLURAL"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#/codebooks">
+                        <i class="fa fa-fw fa-folder-o"></i>
+                        <span translate="CODEBOOKS"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="user-info clearfix" ng-if="vm.userAuthenticated">
+        <span>{{vm.lastName+' '+vm.firstName}}</span> 
+    </div>
+</div>

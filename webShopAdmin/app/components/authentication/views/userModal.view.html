@@ -1,0 +1,89 @@
+﻿<div ng-enter="vm.save()">
+    <form name="vm.form" ng-submit="vm.save()" novalidate>
+        <div class="modal-header">
+            <h3 class="modal-title"><span translate="USER.SINGULAR"></span></h3>
+        </div>
+        <div class="modal-body">
+            <div class="form-horizontal" role="form">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="txtFirstName" class="control-label col-md-2"><span translate="USER.FIRSTNAME" /></label>
+                            <div class="col-md-10">
+                                <input type="text" name="txtFirstName" id="txtFirstName" ng-model="vm.item.FirstName" class="form-control" required autofocus />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtLastName" class="control-label col-md-2"><span translate="USER.LASTNAME" /></label>
+                            <div class="col-lg-10">
+                                <input class="form-control" id="txtLastName" name="txtLastName" ng-model="vm.item.LastName" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="txtUserName" class="control-label col-md-2"><span translate="USER.USERNAME" /></label>
+                            <div class="col-lg-10">
+                                <input class="form-control" id="txtUserName" name="txtUserName" ng-model="vm.item.Username" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':vm.item.Password!=vm.item.ConfirmPassword}">
+                            <label for="txtPassword" class="control-label col-md-2"><span translate="USER.PASSWORD" /></label>
+                            <div class="col-lg-5">
+                                <input type="password" class="form-control" id="txtPassword" name="txtPassword" ng-model="vm.item.Password" autocomplete="off" />
+                            </div>
+                            <div class="col-lg-5">
+                                <password-strength ng-model="vm.item.Password"></password-strength>
+                            </div>
+                        </div>
+                        <div class="form-group" ng-class="{'has-error':vm.item.Password!=vm.item.ConfirmPassword}">
+                            <label for="txtConfirmPass" class="control-label col-md-2"><span translate="USER.PASSWORDCONFIRM"></span></label>
+                            <div class="col-lg-5">
+                                <input type="password" name="txtConfirmPass" id="txtConfirmPass" ng-model="vm.item.ConfirmPassword" class="form-control" required autofocus />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cmbUserRole" class="control-label col-md-2"><span translate="USER.ROLE" /></label>
+                            <div class="col-md-10">
+                                <drop-down-control control-id="cmbUserRole" selected="vm.item.UserRole"
+                                                   model-name="UserRole"
+                                                   get-name="get"
+                                                   model-property="Name"
+                                                   required="true"
+                                                   allow-add-new="false"
+                                                   show-modal="" />
+                            </div>
+                        </div>
+                        <!--<div class="form-group">
+                            <label for="cmbCompany" class="control-label col-md-2"><span translate="COMPANY.SINGULAR" /></label>
+                            <div class="col-md-10">
+                                <drop-down-control control-id="cmbCompany" selected="vm.item.Firma"
+                                                   model-name="Firma"
+                                                   get-name="get"
+                                                   model-property="Naziv"
+                                                   required="true"
+                                                   allow-add-new="false"
+                                                   show-modal="" />
+                            </div>
+                        </div>-->
+                        <!--<div class="form-group">
+                            <label for="cmbJezik" class="control-label col-md-2"><span translate="LANGUAGE" /></label>
+                            <div class="col-md-10">
+                                <drop-down-control control-id="cmbJezik" selected="vm.item.Jezik"
+                                                   model-name="jezik"
+                                                   get-name="get"
+                                                   model-property="Naziv"
+                                                   required="true"
+                                                   allow-add-new="false"
+                                                   show-modal="" />
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="submit"><span translate="SAVE.ACTION"></span></button>
+                <button class="btn btn-default" type="button" ng-click="vm.CloseModal()"><span translate="CLOSE"></span></button>
+            </div>
+    </form>
+</div>
+
+

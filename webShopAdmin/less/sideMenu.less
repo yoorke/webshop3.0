@@ -1,0 +1,128 @@
+﻿.side-menu{
+    width:180px;
+    top:50px;
+    left:0;
+    z-index:998;
+    display:block;
+    min-height:100%;
+    background-color:fade(@brand-primary, 90%);
+    height:100%;
+    position:fixed;
+    font-size:1.1em;
+    transition: all 0.2s ease;
+
+    ul.side-menu-list{
+        margin:0;
+        padding:18px 0 0 0;
+        list-style:none;
+
+        li.side-menu-list-item{
+            display:block;
+            position:relative;
+            float:none;
+            padding:0;
+        }
+
+        li.side-menu-list-item.side-menu-list-item-expanded{
+            b{
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    a.side-menu-list-link{
+        color:darken(@brand-primary, 40%);
+        display:block;
+        height:42px;
+        padding-left:18px;
+        text-shadow:none;
+        line-height:42px;
+        white-space:nowrap;
+        overflow:hidden;
+        cursor:pointer;
+
+        i{
+            margin-right:18px;
+            width:16px;
+            display:inline-block;
+        }
+
+        b{
+            display:block;
+            opacity:1;
+            width:14px;
+            height:14px;
+            line-height:14px;
+            text-shadow:none;
+            position:absolute;
+            right:10px;
+            top:12px;
+            padding:0;
+            text-align:center;
+            transition:transform 0.2s linear;            
+        }
+    }
+
+    a.side-menu-list-link:hover{
+        color:lighten(@brand-primary, 30%);
+    }
+
+    ul.side-menu-submenu-list{
+        padding:0;
+        list-style:none;
+        position:relative;
+        //display:none;
+
+        li.side-menu-submenu-item{
+            display:block;
+            float:none;
+            padding:0;
+            border-bottom:none;
+            position:relative;
+
+            a.side-menu-submenu-link{
+                display:block;
+                text-shadow:none;
+                color:#fff;
+                padding-left:55px;
+                height:auto;
+                line-height:29px;
+                font-size:0.9em;
+            }
+
+            a.side-menu-submenu-link:hover{
+                color:lighten(@brand-primary, 10%);
+            }
+        }
+    }
+
+    .sidemenu-hover-element{
+        width:4px;
+        background:#fff;
+        position:absolute;
+        top:-150px;
+        left:176px;
+        transition: all 0.5s ease;
+        transition-property: top, height;
+        display:block;
+        height:42px;
+    }
+
+    .hr-after{
+        margin-bottom:1em;
+        //border-bottom:1px solid darken(@brand-primary, 10%);
+    }
+}
+
+.menu-collapsed .side-menu{
+    width:52px;
+
+    a.side-menu-list-link b{
+        opacity:0;
+        
+    }
+
+    .sidemenu-hover-element{
+        left:48px !important;
+    }
+}

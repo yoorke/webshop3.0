@@ -1,0 +1,129 @@
+﻿@import 'bootstrap/bootstrap.less';
+@import 'topMenu.less';
+@import 'sideMenu.less';
+@import 'pageWrapper.less';
+//@import 'checklistModel.less';
+//@import 'map.less';
+//@import 'panel-short.less';
+//@import 'radni-nalog.less';
+//@import 'proizvodna-jedinica.less';
+
+//@brand-primary: #31933c;
+@brand-primary: #71b1d1;
+@border-radius-base: 0px;
+@border-radius-large: 0px;
+@border-radius-small: 0px;
+@input-border-focus: @brand-primary;
+@text-color:#777;
+
+@import 'common.less';
+
+
+
+@import (less) '../assets/libs/css/angular-flash2.css';
+@import (less) '../assets/libs/css/font-awesome.min.css';
+@import (less) '../assets/libs/css/scrollable-table.css';
+@import (less) '../assets/libs/css/colorpicker.css';
+@import (less) '../assets/libs/css/customSelect.css';
+@import (less) '../assets/libs/css/btnUpload.min.css';
+@import (less) '../assets/libs/css/angular-ui-switch.css';
+@import (less) '../assets/libs/css/angular-ui-tree.css';
+@import (less) '../assets/libs/css/fullcalendar.css';
+
+html , body{
+    height:100%;
+    font-family: 'Roboto Condensed', Arial;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+
+
+
+.base-menu-items{
+        button{
+            .fa{
+                font-size:1.1em;
+                color:@brand-primary;
+            }
+        }
+    }
+
+.baseContextMenu{
+    display:block;
+    color:#777;
+
+    .fa{
+        margin-right:0.5em;
+    }
+
+    a{
+        color:#777 !important;
+        cursor:pointer;
+    }
+}
+
+.item-icon{
+    color:@brand-primary;
+    cursor:pointer;
+}
+
+ul li a{
+    cursor:pointer;
+}
+
+.input-group-btn{
+    button{
+        span{
+            color:@brand-primary;
+        }
+    }
+}
+
+.panel-heading{
+    span.fa{
+        margin-right:0.5em;
+    }    
+}
+
+
+.tab-content{
+    border-left:1px solid #ccc;
+    border-right:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    padding:1em;
+    height:100%;
+}
+
+
+
+.page-content{
+    //padding:1em;
+    height:100%;
+
+    h1{
+        margin:0;
+        font-size:2.2em;
+        border-bottom:1px solid #eee;
+        padding-bottom:0.2em;
+        width:30%;
+    }
+}
+
+@keyframes fadein{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.modal-header{
+    span.header{
+        font-size:1.5em;
+        color:@brand-primary;
+    }
+}

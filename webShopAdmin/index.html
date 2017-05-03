@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebShop Admin Panel</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/css/style.min.css" type="text/css" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body ng-app="webShopAdmin">
+    <div class="main-content" ng-controller="MainContentController as vm" ng-class="{'menu-collapsed': vm.menuCollapsed || !vm.userAuthenticated}" style="height:100%">
+        <top-menu></top-menu>
+        <side-menu user-authenticated="vm.userAuthenticated" show-modal="vm.ShowModal(modalView, modalController, modalSize, parameters, callback)"></side-menu>
+
+        <div class="page-wrapper" ng-controller="PageContentController as vm">
+            <div class="container-fluid height-100">
+                <div class="row">
+                    <div class="col-md-12">
+                        <flash-message flash-message="10000"></flash-message>
+                    </div>
+                </div>
+                <loader></loader>
+                <div class="row height-100">
+                    <div class="col-md-12 height-100">
+                        <div ng-view class="height-100"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--libs-->
+    <script src="assets/libs/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-route.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-cookies.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-animate.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/ui-bootstrap-tpls-2.4.0.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-flash-2.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-translate.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-translate-loader-static-files.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-translate-storage-local.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-translate-storage-cookie.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-confirm.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/ng-contextmenu.js" type="text/javascript"></script>
+    <script src="assets/libs/js/ckeditor.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-ckeditor.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-scrollable-table.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/bootstrap-colorpicker-module.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/customSelect.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-upload.min.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-ui-switch.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-ui-tree.js" type="text/javascript"></script>
+    <script src="assets/libs/js/Chart.js" type="text/javascript"></script>
+    <script src="assets/libs/js/angular-chart.js" type="text/javascript"></script>
+    <script src="assets/libs/js/checklist-model.js" type="text/javascript"></script>
+    <script src="assets/libs/js/moment.js" type="text/javascript"></script>
+    <script src="assets/libs/js/fullcalendar.js" type="text/javascript"></script>
+    <script src="assets/libs/js/gcal.js" type="text/javascript"></script>
+    <script src="assets/libs/js/calendar.js" type="text/javascript"></script>
+    <script src="assets/libs/js/sortable.js" type="text/javascript"></script>
+
+    <!--app-->
+    <script src="app/app.js" type="text/javascript"></script>
+
+    <!--directives-->
+    <script src="app/directives/dropDownControlDirective/dropDownControlDirective.js" type="text/javascript"></script>
+    <script src="app/directives/compileHtmlDirective.js" type="text/javascript"></script>
+    <script src="app/directives/datepickerIsoDate.js" type="text/javascript"></script>
+    <script src="app/directives/datePickerPopup.js" type="text/javascript"></script>
+    <script src="app/directives/scrollableContainerHeightDirective.js" type="text/javascript"></script>
+    <script src="app/directives/layout/topMenuDirective.js" type="text/javascript"></script>
+    <script src="app/directives/layout/loaderDirective.js" type="text/javascript"></script>
+    <script src="app/directives/layout/sideMenuDirective.js" type="text/javascript"></script>
+    <script src="app/directives/passwordStrength.js" type="text/javascript"></script>
+
+    <!--components-->
+    <script src="app/components/base/services/globalService.js" type="text/javascript"></script>
+    <script src="app/components/authentication/services/authentication.service.js" type="text/javascript"></script>
+    <script src="app/components/authentication/services/flash.service.js" type="text/javascript"></script>
+    <script src="app/components/authentication/services/user.service.js" type="text/javascript"></script>
+    <script src="app/components/authentication/controllers/login.controller.js" type="text/javascript"></script>
+    <script src="app/components/authentication/controllers/UserController.js" type="text/javascript"></script>
+    <script src="app/components/authentication/controllers/userProfileController.js" type="text/javascript"></script>
+    <script src="app/components/authentication/controllers/forgotPasswordController.js" type="text/javascript"></script>
+    <script src="app/components/authentication/controllers/resetPasswordController.js" type="text/javascript"></script>
+    <script src="app/components/base/services/baseService.js" type="text/javascript"></script>
+    <script src="app/components/base/services/dateService.js" type="text/javascript"></script>
+    <script src="app/components/pageContent/controllers/pageContentController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/baseGetController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/baseGetByIDController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/baseSaveModalController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/baseSaveController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/baseDeleteController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/commonController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/initController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/defaultController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/defaultModalController.js" type="text/javascript"></script>
+    <script src="app/components/base/controllers/defaultModalListController.js" type="text/javascript"></script>
+    <script src="app/components/mainContent/controller/mainContentController.js" type="text/javascript"></script>
+    <script src="app/components/home/controllers/homeController.js" type="text/javascript"></script>
+</body>
+</html>

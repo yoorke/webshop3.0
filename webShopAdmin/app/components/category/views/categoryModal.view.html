@@ -1,0 +1,51 @@
+﻿<div ng-enter="vm.BaseSaveModalItem('Category')">
+    <form name="vm.form" ng-submit="vm.BaseSaveModalItem('Category')" novalidate>
+        <div class="modal-header">
+            <button class="close" type="button" aria-label="Close" ng-click="vm.CloseModal()">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <h1 class="modal-title"><span translate="CATEGORY.SINGULAR"></span></h1>            
+        </div>
+        <div class="modal-body">
+            <div role="form">
+                <uib-tabset>
+                    <uib-tab index="0">
+                        <uib-tab-heading>
+                            <span translate="MAINDATA"></span>
+                        </uib-tab-heading>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="form-group" ng-class="{'has-error': vm.form.txtName.$invalid && vm.submitted}">
+                                    <label for="txtName"><span translate="NAME"></span></label>
+                                    <!--<div class="col-md-10">-->
+                                        <input type="text" name="txtName" id="txtName" ng-model="vm.item.Name" class="form-control" required autofocus />
+                                        <div class="error" ng-show="vm.form.txtName.$invalid && vm.submitted"><span translate="VALIDATION.REQUIRED"></span></div>
+                                    <!--</div>-->
+                                </div>
+                                <div class="form-group">
+                                    <label for="cmbParentCategory"><span translate="CATEGORY.PARENT"></span></label>
+                                    <!--<div class="col-md-10">-->
+                                        <drop-down-control control-id="cmbParentCategory" selected="vm.item.ParentCategory"
+                                                           model-name="category" get-name="get" model-property="Name"
+                                                           required="false" allow-add-new="true">
+                                        </drop-down-control>
+                                    <!--</div>-->
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                col 2
+                            </div>
+                            <!--<div class="col-md-4">
+                                col 3
+                            </div>-->
+                        </div>
+                    </uib-tab>
+                </uib-tabset>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit"><span translate="ACTION.SAVE"></span></button>
+            <button class="btn btn-default" type="button" ng-click="vm.CloseModal()"><span translate="ACTION.CLOSE"></span></button>
+        </div>
+    </form>
+</div>

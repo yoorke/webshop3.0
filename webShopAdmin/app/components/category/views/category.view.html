@@ -1,0 +1,34 @@
+﻿<div class="row page-content">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1><span translate="CATEGORY.PLURAL"></span></h1>
+            </div>
+        </div>
+        <div class="margin-top-1 margin-bottom-1" ng-include="vm.root + 'app/components/shared/views/baseMenuItems.view.html'"></div>
+        <div class="row">
+            <div class="col-lg-12 tree-view">
+                <div class="tree-view-header">
+                    <span translate="CATEGORY.SINGULAR"></span>
+                </div>
+                <div ui-tree data-drag-enabled="false">
+                    <ol ui-tree-nodes="" ng-model="vm.items">
+                        <li ng-repeat="item in vm.items" ui-tree-node>
+                            <div ui-tree-handle>
+                                <span ng-click="toggle(this)" ng-class="{'collapsed': collapsed}"><b class="glyphicon glyphicon-chevron-down"></b></span>
+                                <span ng-bind="item.Name"></span>
+                            </div>
+                            <ol ui-tree-nodes="" ng-model="item.SubCategories" ng-class="{'hidden': collapsed}">
+                                <li ng-repeat="subCategory in item.SubCategories" ui-tree-node ng-class="{'alter-row': $index % 2 == 0}">
+                                    <div ui-tree-handle>
+                                        <span ng-bind="subCategory.Name" ng-class="{'alter-row': $index % 2 == 0}"></span>
+                                    </div>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

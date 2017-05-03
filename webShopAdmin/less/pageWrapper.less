@@ -1,0 +1,80 @@
+﻿//PageWrapper
+.page-wrapper{
+    height:calc(~"100% - 50px");
+    padding-top:70px;
+    margin-left:180px;
+    transition:all 0.2s ease;
+    padding-left:20px;
+
+    .page-header{
+        margin: 0;
+    }
+
+    .loader{
+        position:absolute;
+        top:50%;
+        left:50% - 5em;
+        z-index:9999;
+
+        img{
+            width:10em;
+        }
+    }
+
+    //HomePage
+    #homePage{
+        .logo{
+            position:absolute;
+            top:50%;
+            left:50% - 5em;
+            font-size:1.5em;
+            color:#808080;
+        }
+    }
+
+    .flash{
+        position:absolute;
+        top:2em;
+        right:2em;
+        text-align:right;
+        z-index:9999;
+        box-shadow:2px 2px 5px 0px #444;
+    }
+
+    .flash .alert{
+        margin-bottom:5px;
+    }
+
+    .tree-view{
+        padding:0.5em;
+
+        .tree-view-header{
+            background-color:#e8e8e8;
+            height:36px;
+            padding:0.5em;
+            font-weight:bold;
+
+            
+        }
+
+        .angular-ui-tree-handle{
+            color:#777;
+            font-size:1.1em;
+            padding: 0.5em 0;
+        }
+    }
+        
+    
+}
+
+@media (min-width:1200px){
+    .menu-collapsed .page-wrapper{
+        margin-left:52px;
+    }
+}
+
+@media (max-width:1200px) and (min-width: 300px){
+    .page-wrapper{
+        margin-left:50px;
+    }
+}

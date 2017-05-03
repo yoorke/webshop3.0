@@ -1,0 +1,77 @@
+﻿<script type="text/ng-template" id="userModal">
+    <div ng-enter="Save()">
+        <form name="form" ng-submit="register()" novalidate>
+            <div class="modal-header">
+                <!--   <h3 class="modal-title" style="width:90%;display:inline-block"><span ng-show="id == -1"><span translate="USER.NEW"></span></span><span ng-show="id > -1"><span translate="USER.SINGULAR"></span></span></h3>-->
+                <h3 class="modal-title" style="width:90%;display:inline-block"><span translate="USER.NEW"></span></h3>
+                <span style="float:right" ng-show="loading">
+                    <img src="assets/images/blue_loader.gif" style="width:2em" />
+                </span>
+            </div>
+            <div class="modal-body">
+                <div class="form-horizontal" role="form">
+                    <div class="form-group" ng-class="{ 'has-error': form.firstName.$invalid && submitted }">
+                        <label for="firstName" class="control-label col-lg-2"><span translate="NAME.FIRST"></span>:</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="firstName" id="firstName" class="form-control" ng-model="user.Firstname" required autofocus />
+                            <!--<span ng-show="form.firstName.$dirty && form.firstName.$error.required" class="help-block"><span translate="NAME.VALIDATIONF"></span></span>-->
+                            <div class="error" ng-show="form.firstName.$invalid && submitted"><span translate="NAME.VALIDATIONF"></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.lastName.$invalid && submitted }">
+                        <label for="lastName" class="control-label col-lg-2"><span translate="NAME.LAST"></span>:</label>
+                        <div class="col-lg-10">
+                            <input type="text" name="lastName" id="Text1" class="form-control" ng-model="user.Lastname" required />
+                            <!--<span ng-show="form.lastName.$dirty && form.lastName.$error.required" class="help-block"><span translate="NAME.VALIDATIONL"></span></span>-->
+                            <div class="error" ng-show="form.firstName.$invalid && submitted"><span translate="NAME.VALIDATIONL"></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.username.$invalid && submitted && form.username.$error.email }">
+                        <label for="username" class="control-label col-lg-2"><span translate="USER.NAME"></span>:</label>
+                        <div class="col-lg-10">
+                            <input type="email" name="username" id="username" class="form-control" validate-email ng-model="user.username" required />
+                            <!--<span ng-show="form.username.$dirty && form.username.$error.required" class="help-block"><span translate="USER.NAMEVAL"></span></span>-->
+                            <div class="error" ng-show="form.username.$invalid && submitted"><span translate="USER.NAMEVAL"></span></div>
+                            <div class="error" ng-show="form.username.$error.email">Greška</div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error': form.password.$invalid && submitted }">
+                        <label for="password" class="control-label col-lg-2"><span translate="USER.PASSWORD"></span>:</label>
+                        <div class="col-lg-10">
+                            <input type="password" name="password" id="password" class="form-control" ng-model="user.Password" required />
+                            <!--<span ng-show="form.password.$dirty && form.password.$error.required" class="help-block"><span translate="USER.PASSVAL"></span></span>-->
+                            <div class="error" ng-show="form.firstName.$invalid && submitted"><span translate="USER.PASSVAL"></span></div>
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : form.cmbUserRole.$invalid && submitted}">
+                        <label for="cmbUserRole" class="control-label col-lg-2"><span translate="USER.TYPE"></span>:</label>
+                        <div class="col-lg-10">
+                            <select id="cmbUserRole" class="form-control" ng-options="role.Name for role in roles" ng-model="user.UserRole" required></select>
+                            <div class="error" ng-show="form.cmbUserRole.$invalid && submitted"><span translate="USER.TYPEVAL"></span></div>
+                            <!--<span ng-show="form.cmbUserRole.$dirty && form.cmbUserRole.$error.required" class="help-block"><span translate="USER.TYPEVAL"></span></span>-->
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{ 'has-error' : form.cmbOdeljenje.$invalid && submitted}">
+                        <label for="cmbOdeljenje" class="control-label col-lg-2" ng-show="user.UserRole.ID == 4"><span translate="DEPARTMENT.SINGULAR"></span>:</label>
+                        <div class="col-lg-10">
+                            <select id="cmbOdeljenje" class="form-control" ng-options="odeljenje.Naziv for odeljenje in odeljenja" ng-model="user.Odeljenje" ng-show="user.UserRole.ID==4" ng-required="user.Userrole.ID == 4"></select>
+                            <div class="error" ng-show="form.cmbOdeljenje.$invalid && submitted"><span translate="DEPARTMENT.VALIDATION"></span></div>
+                            <!--<span ng-show="form.cmbUserRole.$dirty && form.cmbUserRole.$error.required" class="help-block"><span translate="USER.TYPEVAL"></span></span>-->
+                        </div>
+                    </div>
+                    <div class="form-group" ng-class="{'has-error': form.cmbFirma.$invalid && submitted}">
+                        <label for="cmbFirma" class="control-label col-lg-2"><span translate="FIRM.SINGULAR"></span>:</label>
+                        <div class="col-lg-10">
+                            <select id="cmbFirma" class="form-control" ng-options="firma.Naziv for firma in firme | orderBy: 'Naziv' track by firma.ID" ng-model="user.Firma" required name="cmbFirma"></select>
+                            <div class="error" ng-show="form.cmbFirma.$invalid && submitted"><span translate="FIRM.VALIDATION"></span></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" type="submit"><span translate="SAVE"></span></button>
+                        <button class="btn btn-default" type="button" ng-click="Close()"><span translate="CANCEL"></span></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</script>
