@@ -1,0 +1,47 @@
+﻿<div ng-enter="vm.parameters.modalType == 2 ? vm.BaseReturnItem() : vm.BaseSaveModalItem('Attribute')" class="attribute-modal" ng-init="vm.item.IsFilter = false;vm.item.IsDescription = false">
+    <form name="vm.form" ng-submit="vm.parameters.modalType == 2 ? vm.BaseReturnItem() : vm.BaseSaveModalItem('Attribute')" novalidate>
+        <div class="modal-header">
+            <button class="close" type="button" aria-label="Close" ng-click="vm.CloseModal()">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <h1 class="modal-title"><span translate="ATTRIBUTE.SINGULAR"></span></h1>
+        </div>
+        <div class="modal-body">
+            <div role="form">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="form-group">
+                            <label for="txtName"><span translate="NAME"></span></label>
+                            <input type="text" class="form-control" id="txtName" name="txtName" ng-model="vm.item.Name" required autofocus />
+                        </div>
+                        <div class="form-group">
+                            <label for="cmbCategory"><span translate="CATEGORY.SINGULAR"></span></label>
+                            <drop-down-control control-id="cmbCategory" selected="vm.item.CategoryID"
+                                               model-name="category" get-name="get" model-property="Name"
+                                               required="true" allow-add-new="false" type="2">
+                            </drop-down-control>
+                        </div>
+
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="chkIsFilter"><span translate="FILTER"></span></label>
+                            <span switch id="chkIsFilter" name="chkIsFilter" ng-model="vm.item.IsFilter"></span>
+                        </div>
+                        
+                    </div>
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label for="chkIsDescription"><span translate="DESCRIPTION"></span></label>
+                            <span switch id="chkIsDescription" name="chkIsDescription" ng-model="vm.item.IsDescription"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit"><span translate="ACTION.SAVE.BUTTON"></span></button>
+            <button class="btn btn-default" type="button" ng-click="vm.CloseModal()"><span translate="ACTION.CLOSE"></span></button>
+        </div>
+    </form>
+</div>

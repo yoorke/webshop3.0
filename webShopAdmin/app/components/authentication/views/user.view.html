@@ -24,7 +24,7 @@
                 </thead>
                 <tbody>
                     <tr ng-repeat="item in vm.items | orderBy: vm.sortKey:vm.reverse | filter: vm.searchBox" data-context-menu="app/components/shared/views/baseContextMenu.html" ng-model="contextMenu"
-                        ng-dblclick="vm.ShowModal(vm.itemModalChangeView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)">
+                        ng-dblclick="vm.ShowModal(vm.itemModalEditView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)">
 
                         <td>
                             <input type="checkbox" ng-model="item.checked" />
@@ -44,7 +44,7 @@
                         <td>
                             <span class="fa fa-fw fa-check-square item-icon" ng-show="item.IsActive"></span>
                         </td>
-                        <td style="width:2em"><span class="fa fa-fw fa-pencil item-icon" ng-show="vm.roleID==1 || vm.roleID==2" ng-click="vm.ShowModal(vm.itemModalChangeView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)"></span></td>
+                        <td style="width:2em"><span class="fa fa-fw fa-pencil item-icon" ng-show="vm.roleID==1 || vm.roleID==2" ng-click="vm.ShowModal(vm.itemModalEditView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)"></span></td>
                         <td style="width:2em"><span class="fa fa-fw fa-trash item-icon" ng-show="vm.roleID==1 || vm.roleID==2" ng-click="vm.BaseDelete(item.ID, vm.modelName, vm.Reload)"></span></td>
                     </tr>
                 </tbody>

@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app\app.js" />
+    <Content Include="app\components\attribute\views\attributeModal.view.html" />
     <Content Include="app\components\authentication\controllers\forgotPasswordController.js" />
     <Content Include="app\components\authentication\controllers\login.controller.js" />
     <Content Include="app\components\authentication\controllers\register.controller.delete.js" />
@@ -85,7 +86,7 @@
     <Content Include="app\components\authentication\views\user.view.old.html" />
     <Content Include="app\components\authentication\views\userModal.view.html" />
     <Content Include="app\components\authentication\views\userModal.view.old.html" />
-    <Content Include="app\components\authentication\views\userModalChange.view.html" />
+    <Content Include="app\components\authentication\views\userModalEdit.view.html" />
     <Content Include="app\components\authentication\views\userModalChange.view.old.html" />
     <Content Include="app\components\authentication\views\userProfile.view.html" />
     <Content Include="app\components\base\controllers\baseDeleteController.js" />
@@ -101,6 +102,9 @@
     <Content Include="app\components\base\services\baseService.js" />
     <Content Include="app\components\base\services\dateService.js" />
     <Content Include="app\components\base\services\globalService.js" />
+    <Content Include="app\components\category\controllers\baseCategoryController.js" />
+    <Content Include="app\components\category\controllers\categoryModalController.js" />
+    <Content Include="app\components\category\views\categoriesTable.view.html" />
     <Content Include="app\components\category\views\category.view.html" />
     <Content Include="app\components\category\views\categoryModal.view.html" />
     <Content Include="app\components\home\controllers\homeController.js" />
@@ -233,6 +237,8 @@
     <Content Include="less\style.less" />
     <Content Include="compilerconfig.json" />
     <Content Include="app\translations\sr.json" />
+    <Content Include="less\category.less" />
+    <Content Include="less\ckeditor.less" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -305,6 +311,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\filters\" />
+    <Folder Include="assets\libs\js\lang\" />
+    <Folder Include="assets\libs\js\plugins\" />
+    <Folder Include="assets\libs\js\skins\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

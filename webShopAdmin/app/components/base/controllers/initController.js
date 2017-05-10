@@ -15,7 +15,7 @@
         vm.parentModelName = angular.fromJson($route.current.$$route.parentModelName);
         vm.parentArray = [];
         vm.itemModalView = $route.current.$$route.itemModalView;
-        vm.itemModalChangeView = $route.current.$$route.itemModalChangeView;
+        vm.itemModalEditView = $route.current.$$route.itemModalEditView;
         vm.itemModalController = $route.current.$$route.itemModalController;
         vm.itemModalSize = $route.current.$$route.itemModalSize;
 

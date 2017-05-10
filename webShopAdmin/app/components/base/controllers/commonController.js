@@ -27,9 +27,9 @@
                 }
             });
 
-            modalInstance.result.then(function () {
+            modalInstance.result.then(function (response) {
                 if (callback != undefined)
-                    callback();
+                    callback(response);
             })
         }
 

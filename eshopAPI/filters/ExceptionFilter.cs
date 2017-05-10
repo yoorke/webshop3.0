@@ -17,7 +17,8 @@ namespace eshopAPI.filters
             string message = string.Empty;
             var exception = actionExecutedContext.Exception.GetBaseException();
 
-            if (exception.Message.Contains("DELETE statement conflicted with the REFERENCE constraint"))
+            if (exception.Message.Contains("DELETE statement conflicted with the REFERENCE constraint") ||
+                exception.Message.Contains("The DELETE statement conflicted with the SAME TABLE REFERENCE constraint"))
             {
                 message = "DELETE-REFERENCE-CONSTRAINT";
                 status = HttpStatusCode.Conflict;

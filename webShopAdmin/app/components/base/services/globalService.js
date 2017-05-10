@@ -3,9 +3,9 @@
 
     angular.module('webShopAdmin').factory('GlobalService', GlobalService);
 
-    GlobalService.$inject = ['$rootScope', '$http'];
+    GlobalService.$inject = ['$rootScope', '$http', '$route'];
 
-    function GlobalService($rootScope, $http) {
+    function GlobalService($rootScope, $http, $route) {
         var _showLoader = false;
         var _savedItem = false;
         var _currentUser = null;
@@ -76,10 +76,19 @@
             GetApiUrl: function () {
                 return _apiUrl;
             },
-            LoadModelsParameters: function (modelsParametersFile) {
-                $http.get(modelsParametersFile).then(function (response) {
-                    _modelsParameters = response.data;
-                });
+            LoadModelsParameters: function (modelsParametersSource) {
+                if (modelsParametersSource == 'routes') {
+                    _modelsParameters = {};
+                    angular.forEach($route.routes, function (route, key) {
+                        if (route.modelName != null)
+                            _modelsParameters[route.modelName] = route;
+                    })
+                }
+                else {
+                    $http.get(modelsParametersSource).then(function (response) {
+                        _modelsParameters = response.data;
+                    });
+                }
             },
 
             GetModelsParameters: function() {

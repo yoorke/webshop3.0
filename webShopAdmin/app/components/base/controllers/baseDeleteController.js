@@ -11,23 +11,26 @@
         vm.BaseDeleteAll = BaseDeleteAll;
         //Delete
         function BaseDelete(id, modelName, callback) {
-            $translate(['DELETE.QUESTION', 'DELETE.DELETE', 'CANCEL', 'DELETE.ACTION', 'MODEL-' + modelName.toUpperCase(), 'DELETE.MESSAGE.SUCCESS', 'DELETE.MESSAGE.FAIL']).then(function (translate) {
+            $translate(['ACTION.DELETE.QUESTION', 'ACTION.DELETE.DELETE', 'ACTION.CANCEL', 'ACTION.DELETE.ACTION', 'MODEL.' + modelName.toUpperCase(), 'ACTION.DELETE.MESSAGE.SUCCESS', 'ACTION.DELETE.MESSAGE.FAIL']).then(function (translate) {
                 $confirm({
-                    text: translate['DELETE.QUESTION'] + (translate['MODEL-' + modelName.toUpperCase()]).toLowerCase() + ' ' + id + '?',
-                    title: translate['DELETE.ACTION'],
-                    ok: translate['DELETE.DELETE'],
-                    cancel: translate['CANCEL']
+                    text: translate['ACTION.DELETE.QUESTION'] + (translate['MODEL.' + modelName.toUpperCase()]).toLowerCase() + ' ' + id + '?',
+                    title: translate['ACTION.DELETE.ACTION'],
+                    ok: translate['ACTION.DELETE.DELETE'],
+                    cancel: translate['ACTION.CANCEL']
                 }).then(function () {
                     GlobalService.SetLoaderStatus(true);
                     BaseService.Delete(modelName, id).then(function (response) {
+                        GlobalService.SetLoaderStatus(false);
                         if (response.status == 200) {
-                            Flash.create('success', translate['DELETE.MESSAGE.SUCCESS']);
+                            Flash.create('success', translate['ACTION.DELETE.MESSAGE.SUCCESS']);
                             if (callback != undefined)
-                                callback();
-                            GlobalService.SetLoaderStatus(false);
+                                callback();                            
                         }
-                        else
-                            Flash.create('danger', translate['DELETE.MESSAGE.FAIL']);
+                        else {
+                            $translate('ERRORS.' + response.data).then(function(translate){
+                                Flash.create('danger', translate);
+                            })
+                        }
                     })
                 })
             })
@@ -35,23 +38,24 @@
 
         function BaseDeleteAll(modelName, items, callback) {
             if (items.length > 0) {
-                $translate(['DELETE.MULTIPLE', 'DELETE.DELETE', 'CANCEL', 'DELETE.ACTION', 'MODEL-' + modelName.toUpperCase(), 'DELETE.MESSAGE.SUCCESS', 'DELETE.MESSAGE.FAIL']).then(function (translate) {
+                $translate(['ACTION.DELETE.MULTIPLE', 'ACTION.DELETE.DELETE', 'ACTION.CANCEL', 'ACTION.DELETE.ACTION', 'MODEL.' + modelName.toUpperCase(), 'ACTION.DELETE.MESSAGE.SUCCESS', 'ACTION.DELETE.MESSAGE.FAIL']).then(function (translate) {
                     $confirm({
-                        text: translate['DELETE.MULTIPLE' + '?'],
-                        title: translate['DELETE.ACTION'],
-                        ok: translate['DELETE.DELETE'],
-                        cancel: translate['CANCEL']
+                        text: translate['ACTION.DELETE.MULTIPLE' + '?'],
+                        title: translate['ACTION.DELETE.ACTION'],
+                        ok: translate['ACTION.DELETE.DELETE'],
+                        cancel: translate['ACTION.CANCEL']
                     }).then(function () {
                         GlobalService.SetLoaderStatus(true);
                         BaseService.DeleteAll(modelName, items).then(function (response) {
+                            GlobalService.SetLoaderStatus(false);
                             if (response.status == 200) {
-                                Flash.create('success', translate['DELETE.MESSAGE.SUCCESS'])
+                                Flash.create('success', translate['ACTION.DELETE.MESSAGE.SUCCESS'])
                                 if (callback != undefined)
                                     callback();
-                                GlobalService.SetLoaderStatus(false);
+                                
                             }
                             else
-                                Flash.create('danger', translate['DELETE.MESSAGE.FAIL']);
+                                Flash.create('danger', translate['ACTION.DELETE.MESSAGE.FAIL']);
                         })
                     })
                 })

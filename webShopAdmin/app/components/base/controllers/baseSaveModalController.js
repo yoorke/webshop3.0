@@ -7,6 +7,7 @@
     function BaseSaveModalController(GlobalService, BaseService, vm, $uibModalInstance, $translate, Flash) {
 
         vm.BaseSaveModalItem = BaseSaveModalItem;
+        vm.BaseReturnItem = BaseReturnItem;
 
         //SaveItem
         function BaseSaveModalItem(modelName) {
@@ -17,7 +18,7 @@
                 BaseService.Save(modelName, vm.item).then(function (response) {
                     GlobalService.SetLoaderStatus(false);
                     if (response.status == 200) {
-                        $translate("SAVE.SUCCESS").then(function (translate) {
+                        $translate("ACTION.SAVE.SUCCESS").then(function (translate) {
                             Flash.create('success', translate);
                         });
                         $uibModalInstance.close(response);
@@ -34,6 +35,13 @@
                         });
                     }
                 });
+            }
+        }
+
+        function BaseReturnItem() {
+            vm.submitted = true;
+            if (!vm.form.$invalid) {
+                $uibModalInstance.close(vm.item);
             }
         }
     }

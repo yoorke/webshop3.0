@@ -21,7 +21,7 @@
         function init() {
             vm.BaseGetItems(parameters.modelName, parameters.getName, angular.fromJson(parameters.getParameters), true);
             vm.itemModalView = parameters.itemModalView;
-            vm.itemModalChangeView = parameters.itemModalChangeView;
+            vm.itemModalEditView = parameters.itemModalEditView;
             vm.itemModalController = parameters.itemModalController;
             vm.itemModalSize = parameters.itemModalSize;
             vm.modelName = parameters.modelName;

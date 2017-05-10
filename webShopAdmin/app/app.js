@@ -67,16 +67,16 @@
             .when('/categories', {
                 controller: 'DefaultController',
                 controllerAs: 'vm',
-                templateUrl: '/app/components/category/views/category.view.html',
+                templateUrl: '/app/components/category/views/categoriesTable.view.html',
                 parentModelName: [],
                 parentModelCompare: '',
                 sortBy: 'Name',
                 sortReverse: false,
                 modelName: 'Category',
-                getName: 'get',
+                getName: 'getNestedTable',
                 getParameters: [],
                 itemModalView: 'app/components/category/views/categoryModal.view.html',
-                itemModalController: 'DefaultModalController',
+                itemModalController: 'CategoryModalController',
                 itemModalSize: 'lg'
             });
 
@@ -95,6 +95,7 @@
         GlobalService.SetCurrentUser($cookieStore.get('currentUser'));
         if (GlobalService.GetCurrentUser())
             $http.defaults.headers.common['Authorization'] = 'Bearer ' + GlobalService.GetCurrentUser().access_token;
+        GlobalService.LoadModelsParameters('routes');
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             var restrictedPage = $.inArray($location.path(), ['/login', '/register', '/forgot-password', '/reset-password']) === -1;

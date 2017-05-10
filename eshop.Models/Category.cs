@@ -43,9 +43,12 @@ namespace eshop.Models
         public CategoryBanner CategoryBanner { get; set; }
 
         [SqlFieldNameAttribute("parentCategoryID")]
-        public int ParentCategoryID { get; set; }
+        public int? ParentCategoryID { get; set; }
 
         [SqlFieldNameAttribute("categoryID", "Category", "id", Relation.OneToMany, "getByCategoryID")]
         public List<Category> SubCategories { get; set; }
+
+        [SqlFieldNameAttribute("categoryID", "Attribute", "id", Relation.OneToMany, "getByCategoryID")]
+        public List<Attribute> Attributes { get; set; }
     }
 }

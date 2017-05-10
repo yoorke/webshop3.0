@@ -8,6 +8,7 @@
     <select>category_select</select>
     <delete>category_delete</delete>
     <getByCategoryID>category_getByCategoryID</getByCategoryID>
+    <getRoot>category_getRoot</getRoot>
   </Class>
   <Class>
     <name>categoryBanner</name>
@@ -83,5 +84,14 @@
     <name>menuItem</name>
     <get>menu_get</get>
     <getByMenuID>menu_getByMenuID</getByMenuID>
+  </Class>
+  <Class>
+    <name>attribute</name>
+    <get>attribute_get</get>
+    <insert>attribute_insert</insert>
+    <update>attribute_update</update>
+    <select>attribute_select</select>
+    <delete>attribute_delete</delete>
+    <getByCategoryID>attribute_getByCategoryID</getByCategoryID>
   </Class>
 </Classes>

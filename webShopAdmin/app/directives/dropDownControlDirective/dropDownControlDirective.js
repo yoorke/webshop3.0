@@ -3,9 +3,9 @@
 
     angular.module('webShopAdmin').directive('dropDownControl', DropDownControl);
 
-    DropDownControl.$inject = ['$rootScope', 'BaseService', '$compile', 'GlobalService', '$uibModal'];
+    DropDownControl.$inject = ['$rootScope', 'BaseService', '$compile', 'GlobalService', '$uibModal', '$route'];
 
-    function DropDownControl($rootScope, BaseService, $compile, GlobalService, $uibModal) {
+    function DropDownControl($rootScope, BaseService, $compile, GlobalService, $uibModal, $route) {
         //var templateUrl = GlobalService.GetRoot() + 'app/directives/dropDownControlDirective/dropDownControlTemplate.view.html';
         var modelParameters = GlobalService.GetModelsParameters();
         return {
@@ -24,8 +24,8 @@
                 controlId: '@',
                 allowAddNew: '@',
                 type: '@',
-                getParameters: '@'                
-                
+                getParameters: '@',           
+                //routeName: '@'
             },
             controller: function($scope){
                 $scope.items = [];
@@ -33,7 +33,7 @@
                 $scope.requiredAttribute = $scope.required === 'true' ? 'true' : 'false';
                 $scope.allowAddNew = $scope.allowAddNew === 'true' ? true : false;
                 $scope.modelParameters = GlobalService.GetModelsParameters()[$scope.modelName];
-                
+                //$scope.modelParameters = $route.routes['/' + $scope.routeName];
                 
                 //cope.allowAddNew = false;
             },

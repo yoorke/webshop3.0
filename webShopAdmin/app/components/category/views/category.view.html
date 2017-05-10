@@ -1,17 +1,17 @@
 ﻿<div class="row page-content">
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="height:85%">
         <div class="row">
             <div class="col-lg-12">
                 <h1><span translate="CATEGORY.PLURAL"></span></h1>
             </div>
         </div>
         <div class="margin-top-1 margin-bottom-1" ng-include="vm.root + 'app/components/shared/views/baseMenuItems.view.html'"></div>
-        <div class="row">
-            <div class="col-lg-12 tree-view">
+        <div class="row" style="height:100%">
+            <div class="col-lg-12 tree-view" style="height:100%">
                 <div class="tree-view-header">
                     <span translate="CATEGORY.SINGULAR"></span>
                 </div>
-                <div ui-tree data-drag-enabled="false">
+                <div ui-tree data-drag-enabled="false" class="tree-view-body">
                     <ol ui-tree-nodes="" ng-model="vm.items">
                         <li ng-repeat="item in vm.items" ui-tree-node>
                             <div ui-tree-handle>

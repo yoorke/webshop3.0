@@ -15,7 +15,10 @@
   },
   "COMPANY": { "PLURAL": "Firma" },
   "CODEBOOKS": "Šifarnici",
-  "ACTIVE": "Aktivan",
+  "ACTIVE": {
+    "N": "Aktivan",
+    "A": "Aktivna"
+  },
   "ADDNEWITEM": "Dodaj",
   "SORTBYID": "Sortiraj po unosu",
   "DELETEITEM": "Obriši",
@@ -23,12 +26,31 @@
   "SEARCH": "Pretraga",
   "CLEARSEARCH": "Poništi pretragu",
   "ACTION": {
-    "SAVE": "Sačuvaj",
-    "CLOSE": "Zatvori"
+    "SAVE": {
+      "BUTTON": "Sačuvaj",
+      "SUCCESS": "Uspešno sačuvano"
+    },
+    "CLOSE": "Zatvori",
+    "DELETE": {
+      "QUESTION": "Da li ste sigurni da želite da obrišete ",
+      "DELETE": "Obriši",
+      "ACTION": "Brisanje",
+      "MESSAGE": {
+        "SUCCESS": "Uspešno obrisano",
+        "FAIL": "Brisanje neuspešno"
+      },
+      "MULTIPLE": "Da li ste sigurni da želite da obrišete više stavki?"
+    },
+    "CANCEL": "Odustani"
   },
   "CLOSE": "Zatvori",
   "MAINDATA": "Osnovni podaci",
-  "FIRSTPAGE": "Prva strana",
+  "HOMEPAGEDATA": "Podešavanje početne strane",
+  "SHOWONHOMEPAGE": "Prikaži na početnoj strani",
+  "HOMEPAGEPRODUCTSCOUNT": "Broj proizvoda na početnoj strani",
+  "HOMEPAGESORTINDEX": "Redni broj na početnoj strani",
+  "HOMEPAGEORDERBY": "Sortiraj proizvode po",
+  "PROMOTION": "Promocija",
   "EXTRADATA": "Extra podaci",
   "CATEGORY": {
     "SINGULAR": "Kategorija",
@@ -40,5 +62,23 @@
     "PLURAL": "Atributi"
   },
   "NAME": "Naziv",
-  "VALIDATION": {"REQUIRED": "Podatak je obavezan"}
+  "DESCRIPTION": "Opis",
+  "URL": "Url",
+  "SORTINDEX": "Redni broj",
+  "SLIDER": "Slajder",
+  "CATEGORYBANNER": "Baner kategorije",
+  "IMAGEURL": "Sličica",
+  "BROWSE": "Browse",
+  "VALIDATION": { "REQUIRED": "Podatak je obavezan" },
+  "FILTER": "Filter",
+  "MODEL": { "CATEGORY": "kategoriju" },
+  "ERRORS": {
+    "DELETE-REFERENCE-CONSTRAINT": "Objekat ne može da se obriše pošto je povezan sa drugim objektima",
+    "DUPLICATE-KEY": "Objekat već postoji",
+    "INTERNAL-SERVER-ERROR": "Greška na serveru",
+    "UNAUTHORIZED": "Nemate prava za ovu akciju",
+    "PASSWORD-CHECK": "Šifra nije ispravna",
+    "EMAIL-CHECK": "Email adresa nije ispravna"
+  }
+  
 }

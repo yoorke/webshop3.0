@@ -7,7 +7,7 @@
 
     function DefaultModalController($controller, $uibModalInstance, parameters, GlobalService) {
         var vm = this;
-        vm.UploadButtonOnSuccess = UploadButtonOnSuccess;
+        //vm.UploadButtonOnSuccess = UploadButtonOnSuccess;
 
         $controller('InitController', { vm: vm });
         $controller('BaseGetByIDController', { vm: vm });
@@ -25,12 +25,21 @@
                 vm.item = {};
             vm.apiUrl = GlobalService.GetApiUrl();
             vm.root = GlobalService.GetRoot();
+            vm.parameters = parameters;
             
         }
 
-        function UploadButtonOnSuccess(response) {
-            vm.item.Url = response.data;
+        //function UploadButtonOnSuccess(response) {
+            //vm.item.ImageUrl = response.data;
                 
-        }
+        //}
+
+        //vm.ckeditorOptions = {
+            //language: 'en',
+            //allowedContent: true,
+            //entities: false,
+            //skin: 'office2013',
+            //height: 100
+        //}
     }
 })();

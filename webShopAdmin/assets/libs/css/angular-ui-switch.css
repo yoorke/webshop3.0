@@ -2,7 +2,7 @@
   background: #fff;
   border: 1px solid #dfdfdf;
   position: relative;
-  display: inline-block;
+  display: block;
   box-sizing: content-box;
   overflow: visible;
   width: 52px;
@@ -33,7 +33,7 @@
   -webkit-transition: 0.3s ease-out all;
 }
 .switch.checked {
-  background: rgb(100, 189, 99);
+  background: @brand-primary;
   border-color: rgb(100, 189, 99);
 }
 .switch.checked small {
