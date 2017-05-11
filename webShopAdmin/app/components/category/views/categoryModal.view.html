@@ -50,7 +50,11 @@
                             <div class="col-md-5">
                                 <div class="form-group" ng-class="{'has-error': vm.form.txtUrl.$invalid && vm.submitted}">
                                     <label for="txtUrl"><span translate="URL"></span></label>
-                                    <input type="text" name="txtUrl" id="txtUrl" ng-model="vm.item.Url" class="form-control" required />
+                                    <div class="input-group">
+                                        <span class="input-group-btn"><button type="button" class="btn btn-default" ng-click="vm.SetCategoryUrl()" uib-tooltip="{{'CREATE-URL' | translate}}"><span class="fa fa-fw fa-sign-in"></span></button></span>
+                                        <input type="text" name="txtUrl" id="txtUrl" ng-model="vm.item.Url" class="form-control" required />
+                                        
+                                    </div>
                                     <div class="error" ng-show="vm.form.txtUrl.$invalid && vm.submitted"><span translate="VALIDATION.REQUIRED"></span></div>
                                 </div>
                                 <div class="form-group" ng-class="{'has-error': vm.form.txtSortIndex.$invalid && vm.submitted}">

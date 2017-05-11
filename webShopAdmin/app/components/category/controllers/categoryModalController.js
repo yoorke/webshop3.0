@@ -3,12 +3,12 @@
 
     angular.module('webShopAdmin').controller('CategoryModalController', CategoryModalController);
 
-    CategoryModalController.$inject = ['$controller', '$uibModalInstance', 'parameters', 'GlobalService'];
+    CategoryModalController.$inject = ['$controller', '$uibModalInstance', 'parameters', 'GlobalService', '$scope'];
 
-    function CategoryModalController($controller, $uibModalInstance, parameters, GlobalService) {
+    function CategoryModalController($controller, $uibModalInstance, parameters, GlobalService, $scope) {
         var vm = this;
 
-        $controller('BaseCategoryController', { vm: vm });
+        $controller('BaseCategoryController', { vm: vm, $scope: $scope });
         $controller('BaseSaveModalController', { vm: vm, $uibModalInstance: $uibModalInstance });
         $controller('CommonController', { vm: vm, $uibModalInstance: $uibModalInstance });
 

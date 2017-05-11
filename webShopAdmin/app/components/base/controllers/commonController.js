@@ -8,8 +8,9 @@
     function CommonController(vm, $uibModal, GlobalService, $location, $uibModalInstance) {
 
         vm.ShowModal = ShowModal;
-        vm.Redirect = Redirect;
+        
         vm.CloseModal = CloseModal;
+        
         //if (GlobalService.GetCurrentUser()!==null)
             //vm.roleID = GlobalService.GetCurrentUser().roleID;
         //vm.AddItem = AddItem;        
@@ -33,16 +34,8 @@
             })
         }
 
-        function Redirect(url) {
-            $location.url(url);
-        }
-
         function CloseModal() {
             $uibModalInstance.dismiss();
         }
-
-        
-            
-        
     }
 })();
