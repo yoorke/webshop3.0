@@ -105,6 +105,9 @@
     <Content Include="app\components\category\controllers\baseCategoryController.js" />
     <Content Include="app\components\category\controllers\categoryModalController.js" />
     <Content Include="app\components\category\views\categoriesTable.view.html" />
+    <Content Include="app\components\category\views\categoriesTable.view.min.html">
+      <DependentUpon>categoriesTable.view.html</DependentUpon>
+    </Content>
     <Content Include="app\components\category\views\category.view.html" />
     <Content Include="app\components\category\views\categoryModal.view.html" />
     <Content Include="app\components\home\controllers\homeController.js" />
@@ -123,6 +126,9 @@
     <Content Include="app\directives\dropDownControlDirective\dropDownControlTemplate2.view.html" />
     <Content Include="app\directives\layout\filterMenuDirective.js" />
     <Content Include="app\directives\layout\loader.view.html" />
+    <Content Include="app\directives\layout\loader.view.min.html">
+      <DependentUpon>loader.view.html</DependentUpon>
+    </Content>
     <Content Include="app\directives\layout\loaderDirective.js" />
     <Content Include="app\directives\layout\sideMenu.view.html" />
     <Content Include="app\directives\layout\sideMenuDirective.js" />

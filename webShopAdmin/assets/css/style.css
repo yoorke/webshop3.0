@@ -6934,11 +6934,11 @@ button.close {
 .page-wrapper .loader {
   position: absolute;
   top: 50%;
-  left: 45%;
+  left: 47.4%;
   z-index: 9999;
 }
 .page-wrapper .loader img {
-  width: 10em;
+  width: 5em;
 }
 .page-wrapper #homePage .logo {
   position: absolute;
@@ -11442,6 +11442,7 @@ a:hover {
 .item-icon {
   color: #71b1d1;
   cursor: pointer;
+  font-size: 1.1em;
 }
 ul li a {
   cursor: pointer;

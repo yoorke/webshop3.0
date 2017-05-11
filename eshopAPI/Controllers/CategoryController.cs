@@ -85,7 +85,7 @@ namespace eshopAPI.Controllers
                 categoriesTable.Rows.Add(newRow);
 
                 if (category.SubCategories != null)
-                    getCategories(categoriesTable, category.SubCategories, indent + "--------");
+                    getCategories(categoriesTable, category.SubCategories, indent + "----------------");
             }
 
             return categoriesTable;
