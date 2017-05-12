@@ -110,6 +110,9 @@
     </Content>
     <Content Include="app\components\category\views\category.view.html" />
     <Content Include="app\components\category\views\categoryModal.view.html" />
+    <Content Include="app\components\category\views\categoryModal.view.min.html">
+      <DependentUpon>categoryModal.view.html</DependentUpon>
+    </Content>
     <Content Include="app\components\home\controllers\homeController.js" />
     <Content Include="app\components\home\views\home.view.html" />
     <Content Include="app\components\mainContent\controller\mainContentController.js" />
@@ -138,6 +141,7 @@
     <Content Include="app\directives\passwordStrength.js" />
     <Content Include="app\directives\scrollableContainerHeightDirective.js" />
     <Content Include="app\images\webshopadminlogo.png" />
+    <Content Include="assets\images\preloader.gif" />
     <Content Include="assets\libs\js\config.js" />
     <Content Include="assets\libs\js\contents.css" />
     <Content Include="assets\libs\js\lang\af.js" />

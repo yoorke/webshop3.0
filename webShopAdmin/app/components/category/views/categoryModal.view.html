@@ -140,17 +140,17 @@
                                         <thead>
                                             <tr>
                                                 <th><span translate="NAME"></span></th>
-                                                <th><span>Filter</span></th>
-                                                <th colspan="3"><span>Description</span></th>
+                                                <th style="width:5em"><span>Filter</span></th>
+                                                <th style="width:5em" colspan="3"><span>Description</span></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr ng-repeat="attribute in vm.item.Attributes">
                                                 <td><span ng-bind="attribute.Name"></span></td>
-                                                <td style="width:10px"><span class="fa fa-fw fa-check-circle" ng-show="attribute.IsFilter"></span></td>
-                                                <td style="width:10px"><span class="fa fa-fw fa-check-circle" ng-model="attribute.IsDescription"></span></td>
-                                                <td style="width:10px"><span class="fa fa-fw fa-pencil"></span></td>
-                                                <td style="width:10px"><span class="fa fa-fw fa-trash"></span></td>
+                                                <td style="width:5em" class="text-center"><span class="fa fa-fw fa-check-circle item-icon" ng-show="attribute.IsFilter"></span></td>
+                                                <td style="width:5em" class="text-center"><span class="fa fa-fw fa-check-circle item-icon" ng-model="attribute.IsDescription"></span></td>
+                                                <td style="width:10px"><span class="fa fa-fw fa-pencil item-icon"></span></td>
+                                                <td style="width:10px"><span class="fa fa-fw fa-trash item-icon"></span></td>
                                             </tr>
                                         </tbody>
                                     </table>
