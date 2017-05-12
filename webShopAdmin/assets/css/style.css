@@ -6934,11 +6934,11 @@ button.close {
 .page-wrapper .loader {
   position: absolute;
   top: 50%;
-  left: 47.4%;
+  left: calc(50% - 26em);
   z-index: 9999;
 }
 .page-wrapper .loader img {
-  width: 5em;
+  width: 50em;
 }
 .page-wrapper #homePage .logo {
   position: absolute;

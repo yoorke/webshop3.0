@@ -142,6 +142,9 @@
     <Content Include="app\directives\passwordStrength.js" />
     <Content Include="app\directives\scrollableContainerHeightDirective.js" />
     <Content Include="app\images\webshopadminlogo.png" />
+    <Content Include="assets\images\loader %281%29.gif" />
+    <Content Include="assets\images\loader-2.gif" />
+    <Content Include="assets\images\loading.gif" />
     <Content Include="assets\images\preloader.gif" />
     <Content Include="assets\libs\js\config.js" />
     <Content Include="assets\libs\js\contents.css" />
