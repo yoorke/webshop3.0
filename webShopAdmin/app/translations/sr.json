@@ -79,6 +79,6 @@
     "UNAUTHORIZED": "Nemate prava za ovu akciju",
     "PASSWORD-CHECK": "Šifra nije ispravna",
     "EMAIL-CHECK": "Email adresa nije ispravna"
-  }
-  
+  },
+  "CREATE-URL": "Kreiraj url"
 }
