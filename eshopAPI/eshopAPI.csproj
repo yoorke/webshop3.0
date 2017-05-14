@@ -44,17 +44,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DAL">
-      <HintPath>..\..\..\..\..\Korisnici\Web sajtovi\Framework\DAL\bin\Debug\DAL.dll</HintPath>
+    <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
-    <Reference Include="GenericBE">
-      <HintPath>..\..\..\..\..\Korisnici\Web sajtovi\Framework\GenericBE\bin\Debug\GenericBE.dll</HintPath>
+    <Reference Include="GenericBE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\GenericBE\bin\Debug\GenericBE.dll</HintPath>
     </Reference>
-    <Reference Include="GenericIRepositoryInterfaces">
-      <HintPath>..\..\..\..\..\Korisnici\Web sajtovi\Framework\GenericIRepositoryInterfaces\bin\Debug\GenericIRepositoryInterfaces.dll</HintPath>
+    <Reference Include="GenericIRepositoryInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\GenericIRepositoryInterfaces\bin\Debug\GenericIRepositoryInterfaces.dll</HintPath>
     </Reference>
-    <Reference Include="GenericRepositories">
-      <HintPath>..\..\..\..\..\Korisnici\Web sajtovi\Framework\GenericRepositories\bin\Debug\GenericRepositories.dll</HintPath>
+    <Reference Include="GenericRepositories, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\GenericRepositories\bin\Debug\GenericRepositories.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -131,8 +135,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Utility">
-      <HintPath>..\..\..\..\..\Korisnici\Web sajtovi\Framework\Utility\bin\Debug\Utility.dll</HintPath>
+    <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Framework\Utility\bin\Debug\Utility.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
@@ -228,6 +233,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AttributeController.cs" />
     <Compile Include="Controllers\CategoryBannerController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ConfigurationController.cs" />

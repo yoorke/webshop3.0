@@ -10,10 +10,10 @@
         vm.BaseDelete = BaseDelete;
         vm.BaseDeleteAll = BaseDeleteAll;
         //Delete
-        function BaseDelete(id, modelName, callback) {
-            $translate(['ACTION.DELETE.QUESTION', 'ACTION.DELETE.DELETE', 'ACTION.CANCEL', 'ACTION.DELETE.ACTION', 'MODEL.' + modelName.toUpperCase(), 'ACTION.DELETE.MESSAGE.SUCCESS', 'ACTION.DELETE.MESSAGE.FAIL']).then(function (translate) {
+        function BaseDelete(id, modelName, callback, itemName) {
+            $translate(['ACTION.DELETE.QUESTION', 'ACTION.DELETE.DELETE', 'ACTION.CANCEL', 'ACTION.DELETE.ACTION', 'MODEL.' + modelName.toUpperCase() + '.DELETE', 'ACTION.DELETE.MESSAGE.SUCCESS', 'ACTION.DELETE.MESSAGE.FAIL']).then(function (translate) {
                 $confirm({
-                    text: translate['ACTION.DELETE.QUESTION'] + (translate['MODEL.' + modelName.toUpperCase()]).toLowerCase() + ' ' + id + '?',
+                    text: translate['ACTION.DELETE.QUESTION'] + (translate['MODEL.' + modelName.toUpperCase() + '.DELETE']).toLowerCase() + ' ' + itemName + '?',
                     title: translate['ACTION.DELETE.ACTION'],
                     ok: translate['ACTION.DELETE.DELETE'],
                     cancel: translate['ACTION.CANCEL']
@@ -24,7 +24,7 @@
                         if (response.status == 200) {
                             Flash.create('success', translate['ACTION.DELETE.MESSAGE.SUCCESS']);
                             if (callback != undefined)
-                                callback();                            
+                                callback(response);
                         }
                         else {
                             $translate('ERRORS.' + response.data).then(function(translate){
@@ -40,7 +40,7 @@
             if (items.length > 0) {
                 $translate(['ACTION.DELETE.MULTIPLE', 'ACTION.DELETE.DELETE', 'ACTION.CANCEL', 'ACTION.DELETE.ACTION', 'MODEL.' + modelName.toUpperCase(), 'ACTION.DELETE.MESSAGE.SUCCESS', 'ACTION.DELETE.MESSAGE.FAIL']).then(function (translate) {
                     $confirm({
-                        text: translate['ACTION.DELETE.MULTIPLE' + '?'],
+                        text: translate['ACTION.DELETE.MULTIPLE'] + '(' + items.length + ')',
                         title: translate['ACTION.DELETE.ACTION'],
                         ok: translate['ACTION.DELETE.DELETE'],
                         cancel: translate['ACTION.CANCEL']
@@ -55,7 +55,9 @@
                                 
                             }
                             else
-                                Flash.create('danger', translate['ACTION.DELETE.MESSAGE.FAIL']);
+                                $translate('ERRORS.' + response.data).then(function (translate) {
+                                    Flash.create('danger', translate);
+                                })
                         })
                     })
                 })

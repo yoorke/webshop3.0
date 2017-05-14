@@ -17,11 +17,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr ng-repeat="item in vm.items | filter: vm.searchBox">
+                            <tr ng-repeat="item in vm.items | filter: vm.searchBox" ng-dblclick="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)">
                                 <td><input type="checkbox" ng-model="item.Checked" /></td>                                
                                 <td><span class="indent" ng-bind="item.Indent"></span><img class="imageUrl" ng-src="{{item.ImageUrl != null ? vm.apiUrl + 'images/' + item.ImageUrl : ''}}" /><span ng-bind="item.Name"></span></td>
                                 <td style="width:2em"><span class="fa fa-fw fa-pencil item-icon" ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)"></span></td>
-                                <td style="width:2em"><span class="fa fa-fw fa-trash item-icon" ng-click="vm.BaseDelete(item.ID, vm.modelName, vm.Reload)"></span></td>
+                                <td style="width:2em"><span class="fa fa-fw fa-trash item-icon" ng-click="vm.BaseDelete(item.ID, vm.modelName, vm.OnItemDeleted, item.Name)"></span></td>
                             </tr>
                         </tbody>
                     </table>

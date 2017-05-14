@@ -45,10 +45,10 @@ namespace eshop.Models
         [SqlFieldNameAttribute("parentCategoryID")]
         public int? ParentCategoryID { get; set; }
 
-        [SqlFieldNameAttribute("categoryID", "Category", "id", Relation.OneToMany, "getByCategoryID")]
+        [SqlFieldNameAttribute("categoryID", "Category", "id", Relation.OneToMany, "getByCategoryID", false)]
         public List<Category> SubCategories { get; set; }
 
-        [SqlFieldNameAttribute("categoryID", "Attribute", "id", Relation.OneToMany, "getByCategoryID")]
+        [SqlFieldNameAttribute("categoryID", "Attribute", "id", Relation.OneToMany, "getByCategoryID", true)]
         public List<Attribute> Attributes { get; set; }
     }
 }

@@ -12,9 +12,10 @@
         $controller('CommonFunctionsController', { vm: vm });
 
         vm.UploadButtonOnSuccess = UploadButtonOnSuccess;
-        vm.LoadAttributes = LoadAttributes;
-        vm.AddAttribute = AddAttribute;
+        //vm.LoadAttributes = LoadAttributes;
+        vm.SaveAttribute = SaveAttribute;
         vm.SetCategoryUrl = SetCategoryUrl;
+        vm.DeleteAttribute = DeleteAttribute;
 
         vm.ckeditorOptions = {
             language: 'en',
@@ -28,16 +29,25 @@
             vm.item.ImageUrl = response.data;
         }
 
-        function LoadAttributes() {
-            BaseService.GetByParameters('attribute', 'getByCategoryID', { CategoryID: vm.item.ID }).then(function (response) {
-                vm.item.Attributes = response.data;
-            })
-        }
+        //function LoadAttributes() {
+            //vm.item.Attributes = [];
+            //BaseService.GetByParameters('attribute', 'getByCategoryID', { CategoryID: vm.item.ID }).then(function (response) {
+                //if(response.status == 200)
+                    //vm.item.Attributes = response.data;
+            //})
+        //}
 
-        function AddAttribute(attribute) {
+        function SaveAttribute(attribute) {
             if (vm.item.Attributes == null)
                 vm.item.Attributes = [];
-            vm.item.Attributes.push(attribute);
+            if (attribute.itemIndex == -1)
+                vm.item.Attributes.push(attribute);
+            else if (attribute.itemIndex > -1)
+                vm.item.Attributes[attribute.itemIndex] = attribute;
+        }
+
+        function DeleteAttribute(index) {
+            vm.item.Attributes.splice(index, 1);
         }
 
         //$scope.$watch(function () {
@@ -52,5 +62,9 @@
             if (vm.item.Name != null)
                 vm.item.Url = vm.CreateFriendlyUrl(vm.item.Name);
         }
+
+        
+
+        
     }
 })();

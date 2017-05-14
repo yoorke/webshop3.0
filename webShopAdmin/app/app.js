@@ -62,7 +62,8 @@
                 itemModalView: 'app/components/authentication/views/userModal.view.html',
                 itemModalEditView: 'app/components/authentication/views/userModalEdit.view.html',
                 itemModalController: 'UserController',
-                itemModalSize: 'md'
+                itemModalSize: 'md',
+                itemAddedMethod: 'noReload'
             })
             .when('/categories', {
                 controller: 'DefaultController',
@@ -77,7 +78,8 @@
                 getParameters: [],
                 itemModalView: 'app/components/category/views/categoryModal.view.html',
                 itemModalController: 'CategoryModalController',
-                itemModalSize: 'lg'
+                itemModalSize: 'lg',
+                itemAddedMethod: 'reload'
             });
 
         $translateProvider

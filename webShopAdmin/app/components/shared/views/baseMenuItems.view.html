@@ -1,7 +1,7 @@
 ﻿<div class="row base-menu-items">
     <div class="col-md-8">
         <div class="btn-group">
-            <button id="btnAdd" ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: -1}, vm.Reload)" class="btn btn-default" uib-tooltip="{{'ADDNEWITEM' | translate}}" tooltip-append-to-body="true" tooltip-placement="top-left"><span class="fa fa-fw fa-plus"></span></button>
+            <button id="btnAdd" ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: -1}, vm.OnItemAdded)" class="btn btn-default" uib-tooltip="{{'ADDNEWITEM' | translate}}" tooltip-append-to-body="true" tooltip-placement="top-left"><span class="fa fa-fw fa-plus"></span></button>
             <button id="btnSortByID" ng-click="vm.SortByID()" class="btn btn-default" uib-tooltip="{{'SORTBYID' | translate}}" tooltip-append-to-body="true" tooltip-placement="top"><span class="fa fa-fw fa-sort-amount-desc"></span></button>
             <button id="btnDelete" ng-click="vm.DeleteAll()" class="btn btn-default" uib-tooltip="{{'DELETEITEM' | translate}}" tooltip-append-to-body="true" tooltip-placement="top"><span class="fa fa-fw fa-trash"></span></button>
             <button id="btnHelp" ng-click="vm.showHelp = !vm.showHelp" class="btn btn-default" uib-tooltip="{{'HELP' | translate}}" tooltip-append-to-body="true" tooltip-placement="top-right"><span class="fa fa-fw fa-question"></span></button>

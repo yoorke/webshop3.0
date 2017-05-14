@@ -33,5 +33,7 @@ namespace eshop.Models
 
         [SqlFieldNameAttribute("languageID", "Language", "id", Relation.OneToOne)]
         public Language Language { get; set; }
+
+        public string Name { get { return FirstName + " " + LastName; } }
     }
 }

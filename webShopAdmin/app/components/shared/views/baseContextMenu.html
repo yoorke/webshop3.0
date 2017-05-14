@@ -1,7 +1,7 @@
 ﻿<div class="">
     <ul id="baseContextMenu" class="dropdown-menu baseContextMenu">
-        <li ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: -1 }, vm.Reload)"><a><span class="fa fa-fw fa-plus"></span><span translate="ADDNEWITEM"></span></a></li>
+        <li ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: -1 }, vm.OnItemAdded)"><a><span class="fa fa-fw fa-plus"></span><span translate="ADDNEWITEM"></span></a></li>
         <li ng-click="vm.ShowModal(vm.itemModalView, vm.itemModalController, vm.itemModalSize, { ID: item.ID, modelName: vm.modelName }, vm.Reload)"><a><span class="fa fa-fw fa-pencil"></span><span translate="EDITITEM"></span></a></li>
-        <li ng-click="vm.BaseDelete(item.ID, vm.modelName, vm.Reload)"><a><span class="fa fa-fw fa-trash"></span><span translate="DELETEITEM"></span></a></li>
+        <li ng-click="vm.BaseDelete(item.ID, vm.modelName, vm.Reload, item.Name)"><a><span class="fa fa-fw fa-trash"></span><span translate="DELETEITEM"></span></a></li>
     </ul>
 </div>

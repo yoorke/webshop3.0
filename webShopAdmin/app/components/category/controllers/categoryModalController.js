@@ -15,10 +15,13 @@
         init();
 
         function init() {
+            vm.ID = parameters.ID;
             if (parameters.ID > 0)
                 vm.BaseGetItemByID(parameters.modelName, parameters.ID).then(function (response) {
                     vm.item = response.data;
-                    vm.LoadAttributes();
+                    //vm.LoadAttributes();
+                    if (vm.item.Attributes == null)
+                        vm.item.Attributes = [];
                 });
             else {
                 vm.item = {};

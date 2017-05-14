@@ -55,7 +55,8 @@
   "CATEGORY": {
     "SINGULAR": "Kategorija",
     "PLURAL": "Kategorije",
-    "PARENT": "Nadkategorija"
+    "PARENT": "Nadkategorija",
+    "NEW": "Nova kategorija"
   },
   "ATTRIBUTE": {
     "SINGULAR": "Atribut",
@@ -71,7 +72,7 @@
   "BROWSE": "Browse",
   "VALIDATION": { "REQUIRED": "Podatak je obavezan" },
   "FILTER": "Filter",
-  "MODEL": { "CATEGORY": "kategoriju" },
+  "MODEL": { "CATEGORY": { "DELETE": "kategoriju" } },
   "ERRORS": {
     "DELETE-REFERENCE-CONSTRAINT": "Objekat ne može da se obriše pošto je povezan sa drugim objektima",
     "DUPLICATE-KEY": "Objekat već postoji",

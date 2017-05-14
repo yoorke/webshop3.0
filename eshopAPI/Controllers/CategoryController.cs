@@ -42,10 +42,7 @@ namespace eshopAPI.Controllers
 
             IEnumerable<Category> categoriesList = GetRoot();
 
-            return getCategories(categoriesTable, categoriesList, string.Empty);
-            
-
-            
+            return categoriesList != null ? getCategories(categoriesTable, categoriesList, string.Empty) : null;
         }
 
         public IHttpActionResult Post([FromBody] Category category)
@@ -61,10 +58,12 @@ namespace eshopAPI.Controllers
 
         public IHttpActionResult Delete(int id)
         {
-            new GenericRepository<Category>().Delete(new GenericRepository<Category>().GetByID(id));
-            return Ok();
+            Category category = new GenericRepository<Category>().GetByID(id);
+            new GenericRepository<Category>().Delete(category);
+            return Ok(category);
         }
 
+        [HttpPost]
         public IHttpActionResult DeleteAll(int[] ids)
         {
             foreach (int id in ids)
