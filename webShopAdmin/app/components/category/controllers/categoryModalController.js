@@ -12,6 +12,8 @@
         $controller('BaseSaveModalController', { vm: vm, $uibModalInstance: $uibModalInstance });
         $controller('CommonController', { vm: vm, $uibModalInstance: $uibModalInstance });
 
+        vm.showModalLoader = true;
+
         init();
 
         function init() {
@@ -22,6 +24,7 @@
                     //vm.LoadAttributes();
                     if (vm.item.Attributes == null)
                         vm.item.Attributes = [];
+                    vm.showModalLoader = false;
                 });
             else {
                 vm.item = {};

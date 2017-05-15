@@ -11481,3 +11481,9 @@ ul li a {
 .modal-header h1.modal-title {
   font-size: 2em;
 }
+.modal-header .loader img {
+  position: absolute;
+  left: -3em;
+  top: 0;
+  width: 150px;
+}

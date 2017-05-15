@@ -9,6 +9,7 @@
         var vm = this;
         //vm.UploadButtonOnSuccess = UploadButtonOnSuccess;
         vm.SaveItem = SaveItem;
+        
 
         $controller('InitController', { vm: vm });
         $controller('BaseGetByIDController', { vm: vm });
@@ -22,6 +23,7 @@
                 if (parameters.ID > 0)
                     vm.BaseGetItemByID(parameters.modelName, parameters.ID).then(function (response) {
                         vm.item = response.data;
+                        
                     })
                 else
                     vm.item = {};

@@ -6,7 +6,7 @@
     BaseGetByIDController.$inject = ['vm', 'BaseService'];
 
     function BaseGetByIDController(vm, BaseService) {
-        vm.BaseGetItemByID = BaseGetItemByID;
+        vm.BaseGetItemByID = BaseGetItemByID;        
 
         function BaseGetItemByID(modelName, id) {
             return BaseService.GetByID(modelName, id).then(function (response) {

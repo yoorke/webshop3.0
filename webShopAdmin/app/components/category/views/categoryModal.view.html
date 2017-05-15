@@ -4,7 +4,8 @@
             <button class="close" type="button" aria-label="Close" ng-click="vm.CloseModal()">
                 <span class="glyphicon glyphicon-remove"></span>
             </button>
-            <h1 class="modal-title"><span ng-if="vm.ID == -1" translate="CATEGORY.NEW"></span><span ng-if="vm.ID > 0" ng-bind="vm.item.Name"></span></h1>            
+            <h1 class="modal-title"><span ng-if="vm.ID == -1" translate="CATEGORY.NEW"></span><span ng-if="vm.ID > 0" ng-bind="vm.item.Name"></span></h1>
+            <span class="loader"><img src="../../../../assets/images/loader-2.gif" ng-show="vm.showModalLoader" /></span>
         </div>
         <div class="modal-body">
             <div role="form">
