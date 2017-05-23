@@ -81,5 +81,15 @@
     "PASSWORD-CHECK": "Šifra nije ispravna",
     "EMAIL-CHECK": "Email adresa nije ispravna"
   },
-  "CREATE-URL": "Kreiraj url"
+  "CREATE-URL": "Kreiraj url",
+  "CONFIGURATION": {
+    "SINGULAR": "Podešavanje",
+    "PLURAL": "Podešavanja",
+    "EMAILS": "Podešavanje email adrese",
+    "BASIC": "Osnovna podešavanja",
+    "IMAGES": "Podešavanje slika",
+    "PRODUCTS": "Podešavanje proizvoda",
+    "DISCOUNT": "Podešavanje popusta",
+    "DELIVERY": "Podešavanje dostave"
+  }
 }

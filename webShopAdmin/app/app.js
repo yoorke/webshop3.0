@@ -68,7 +68,7 @@
             .when('/categories', {
                 controller: 'DefaultController',
                 controllerAs: 'vm',
-                templateUrl: '/app/components/category/views/categoriesTable.view.html',
+                templateUrl: 'app/components/category/views/categoriesTable.view.html',
                 parentModelName: [],
                 parentModelCompare: '',
                 sortBy: 'Name',
@@ -80,6 +80,22 @@
                 itemModalController: 'CategoryModalController',
                 itemModalSize: 'lg',
                 itemAddedMethod: 'reload'
+            })
+            .when('/configuration', {
+                controller: 'DefaultController',
+                controllerAs: 'vm',
+                templateUrl: 'app/components/configuration/views/configuration.view.html',
+                parentModelName: [],
+                parentModelCompare: '',
+                sortBy: '',
+                sortReverse: false,
+                modelName: 'Configuration',
+                getName: 'get',
+                getParameters: [],
+                itemModalView: '',
+                itemModalController: '',
+                itemModalSize: '',
+                itemAddedMethod: ''
             });
 
         $translateProvider

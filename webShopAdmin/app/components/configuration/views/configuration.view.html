@@ -1,0 +1,55 @@
+﻿<div class="row page-content">
+    <form name="vm.form" ng-submit="vm.BaseSaveItem('Configuration')">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1><span translate="CONFIGURATION.PLURAL"></span></h1>
+                </div>
+            </div>
+            <div class="row margin-top-1">
+                <div class="col-lg-12">
+                    <div class="btn-group">
+                        <button id="btnSave" class="btn btn-primary" ng-click="vm.BaseSaveItem('Configuration')"><span class="fa fa-fw fa-floppy-o"></span><span translate="ACTION.SAVE.BUTTON"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row margin-top-1">
+                <div class="col-lg-12">
+
+                    <uib-tabset>
+                        <uib-tab index="0">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.BASIC"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                        <uib-tab index="1">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.EMAILS"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                        <uib-tab index="2">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.IMAGES"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                        <uib-tab index="3">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.PRODUCTS"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                        <uib-tab index="4">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.DISCOUNT"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                        <uib-tab index="5">
+                            <uib-tab-heading>
+                                <span translate="CONFIGURATION.DELIVERY"></span>
+                            </uib-tab-heading>
+                        </uib-tab>
+                    </uib-tabset>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

@@ -11,6 +11,11 @@ namespace eshopAPI.Controllers
 {
     public class ConfigurationController : BaseController
     {
+        public IEnumerable<Configuration> Get()
+        {
+            return new GenericRepository<Configuration>().GetAll(null, false, false);
+        }
+
         public Configuration Get(int id)
         {
             return new GenericRepository<Configuration>().GetByID(id);

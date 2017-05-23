@@ -109,11 +109,12 @@
     <Content Include="app\components\category\views\categoriesTable.view.min.html">
       <DependentUpon>categoriesTable.view.html</DependentUpon>
     </Content>
-    <Content Include="app\components\category\views\category.view.html" />
+    <Content Include="app\components\category\views\categoriesTree.view.html" />
     <Content Include="app\components\category\views\categoryModal.view.html" />
     <Content Include="app\components\category\views\categoryModal.view.min.html">
       <DependentUpon>categoryModal.view.html</DependentUpon>
     </Content>
+    <Content Include="app\components\configuration\views\configuration.view.html" />
     <Content Include="app\components\home\controllers\homeController.js" />
     <Content Include="app\components\home\views\home.view.html" />
     <Content Include="app\components\mainContent\controller\mainContentController.js" />

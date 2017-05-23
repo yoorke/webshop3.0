@@ -18,6 +18,7 @@
         $controller('BaseGetController', { vm: vm });
         $controller('CommonController', { vm: vm, $uibModalInstance: null });
         $controller('BaseDeleteController', { vm: vm });
+        $controller('BaseSaveController', { vm: vm });
 
         init();
 
