@@ -45,6 +45,15 @@ namespace eshopAPI.Controllers
             return categoriesList != null ? getCategories(categoriesTable, categoriesList, string.Empty) : null;
         }
 
+        [HttpGet]
+        [ActionName("GetSortIndex")]
+        public int GetSortIndex(int parentCategoryID)
+        {
+            List<QueryParameter> parameters = new List<QueryParameter>();
+            parameters.Add(new QueryParameter("parentCategoryID", parentCategoryID));
+            return (int)new GenericRepository<Category>().GetScalar("category", "getSortIndex", parameters);
+        }
+
         public IHttpActionResult Post([FromBody] Category category)
         {
             category.ID = new GenericRepository<Category>().Insert(category);

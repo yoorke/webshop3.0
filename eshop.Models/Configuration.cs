@@ -129,6 +129,10 @@ namespace eshop.Models
         [SqlFieldNameAttribute("userDiscountOnlyOnProductNotOnPromotion")]
         public bool UserDiscountOnlyOnProductNotOnPromotion { get; set; }
 
+        [SqlFieldNameAttribute("categoryImageWidth")]
+        public int CategoryImageWidth { get; set; }
 
+        [SqlFieldNameAttribute("categoryImageHeight")]
+        public int CategoryImageHeight { get; set; }
     }
 }

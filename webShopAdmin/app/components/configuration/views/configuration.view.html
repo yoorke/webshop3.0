@@ -21,16 +21,128 @@
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.BASIC"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtCompanyName"><span translate="CONFIGURATION.COMPANYNAME"></span></label>
+                                        <input type="text" id="txtCompanyName" name="txtCompanyName" class="form-control" ng-model="vm.item.CompanyName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtImageUrl"><span translate="IMAGEURL"></span></label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <img ng-src="{{vm.item.WebShopLogoUrl != null ? vm.apiUrl + 'images/' + vm.item.WebShopLogoUrl : ''}}" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div id="btnBrowse" class="btn btn-default btn-upload pull-right" upload-button url="{{vm.apiUrl}}api/Common/Upload" on-success="vm.UploadButtonSuccess(response)"><span translate="BROWSE"></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtWebShopUrl"><span translate="CONFIGURATION.WEBSHOPURL"></span></label>
+                                        <input type="text" id="txtWebShopUrl" name="txtWebShopUrl" class="form-control" ng-model="vm.item.WebShopUrl" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtWebShopLoginUrl"><span translate="CONFIGURATION.WEBSHOPLOGINURL"></span></label>
+                                        <input type="text" id="txtWebShopLoginUrl" name="txtWebShopLoginUrl" class="form-control" ng-model="vm.item.WebShopLoginUrl" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtWebShopAdminUrl"><span translate="CONFIGURATION.WEBSHOPADMINURL"></span></label>
+                                        <input type="text" id="txtWebShopAdminUrl" name="txtWebShopAdminUrl" class="form-control" ng-model="vm.item.WebShopAdminUrl" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    
+                                </div>
+                            </div>
                         </uib-tab>
                         <uib-tab index="1">
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.EMAILS"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtInfoEmail"><span translate="CONFIGURATION.INFOEMAIL.SINGULAR"></span></label>
+                                        <input type="text" id="txtInfoEmail" name="txtInfoEmail" class="form-control" ng-model="vm.item.InfoEmail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtInfoEmailPassword"><span translate="CONFIGURATION.INFOEMAIL.PASSWORD"></span></label>
+                                        <input type="text" id="txtInfoEmailPassword" name="txtInfoEmailPassword" class="form-control" ng-model="vm.item.InfoEmailPassword" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtOrderEmail"><span translate="CONFIGURATION.ORDEREMAIL.SINGULAR"></span></label>
+                                        <input type="text" id="txtOrderEmail" name="txtOrderEmail" class="form-control" ng-model="vm.item.OrderEmail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtOrderEmailPassword"><span translate="CONFIGURATION.ORDEREMAIL.PASSWORD"></span></label>
+                                        <input type="text" id="txtOrderEmailPassword" name="txtOrderEmailPassword" class="form-control" ng-model="vm.item.OrderEmailPassword" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtErrorEmail"><span translate="CONFIGURATION.ERROREMAIL.SINGULAR"></span></label>
+                                        <input type="text" id="txtErrorEmail" name="txtErrorEmail" class="form-control" ng-model="vm.item.ErrorEmail" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtErrorEmailPassword"><span translate="CONFIGURATION.ERROREMAIL.PASSWORD"></span></label>
+                                        <input type="text" id="txtErrorEmailPassword" name="txtErrorEmailPassword" class="form-control" ng-model="vm.item.ErrorEmailPassword" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtSmtp"><span>Smtp</span></label>
+                                        <input type="text" id="txtSmtp" name="txtSmtp" class="form-control" ng-model="vm.item.Smtp" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtSmptPort"><span>Smtp port</span></label>
+                                        <input type="text" id="txtSmtpPort" name="txtSmtpPort" class="form-control" ng-model="vm.item.SmtpPort" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkSmtpSsl"><span>Smtp SSL</span></label>
+                                        <input type="checkbox" id="chkSmtpSsl" name="chkSmtpSsl" class="checkbox" ng-model="vm.item.SmtpSsl" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkErrorSmtp"><span translate="CONFIGURATION.ERRORSMTP.SINGULAR"></span></label>
+                                        <input type="text" id="txtErrorSmtp" name="txtErrorSmtp" class="form-control" ng-model="vm.item.ErrorSmtp" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtErrorSmtpPort"><span translate="CONFIGURATION.ERRORSMTP.PORT"></span></label>
+                                        <input type="text" id="txtErrorSmtpPort" name="txtErrorSmtpPort" class="form-control" ng-model="vm.item.ErrorSmtpPort" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkErrorSmtpSsl"><span translate="CONFIGURATION.ERRORSMTP.SSL"></span></label>
+                                        <input type="checkbox" id="chkErrorSmtpSsl" name="chkErrorSmtpSSl" class="checkbox" ng-model="vm.item.ErrorSmtpSsl" />
+                                    </div>
+                                </div>
+                            </div>
                         </uib-tab>
                         <uib-tab index="2">
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.IMAGES"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtCategoryImageWidth"><span translate="CATEGORY.IMAGE.WIDTH"></span></label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtCategoryImageWidth" name="txtCategoryImageWidth" class="form-control" ng-model="vm.item.CategoryImageWidth" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtCategoryImageHeight" name="txtCategoryImageHeight" class="form-control" ng-model="vm.item.CategoryImageHeight" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtCategoryImageHeight"><span translate="CATEGORY.IMAGE.HEIGHT"></span></label>
+                                        
+                                    </div>
+                                    <div class="col-md-4">
+
+                                    </div>
+                                </div>
+                            </div>
                         </uib-tab>
                         <uib-tab index="3">
                             <uib-tab-heading>

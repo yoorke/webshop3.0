@@ -56,7 +56,11 @@
     "SINGULAR": "Kategorija",
     "PLURAL": "Kategorije",
     "PARENT": "Nadkategorija",
-    "NEW": "Nova kategorija"
+    "NEW": "Nova kategorija",
+    "IMAGE": {
+      "WIDTH": "Širina slike kategorije",
+      "HEIGHT": "Visina slike kategorije"
+    }
   },
   "ATTRIBUTE": {
     "SINGULAR": "Atribut",
@@ -90,6 +94,27 @@
     "IMAGES": "Podešavanje slika",
     "PRODUCTS": "Podešavanje proizvoda",
     "DISCOUNT": "Podešavanje popusta",
-    "DELIVERY": "Podešavanje dostave"
+    "DELIVERY": "Podešavanje dostave",
+    "INFOEMAIL": {
+      "SINGULAR": "Info email",
+      "PASSWORD": "Info email šifra"
+    },
+    "ORDEREMAIL": {
+      "SINGULAR": "Email za poručivanje",
+      "PASSWORD": "Email za poručivanje šifra"
+    },
+    "ERROREMAIL": {
+      "SINGULAR": "Email za greške",
+      "PASSWORD": "Email za greške šifra"
+    },
+    "COMPANYNAME": "Naziv web shop-a",
+    "WEBSHOPURL": "Web shop URL",
+    "WEBSHOPLOGINURL": "Login URL",
+    "WEBSHOPADMINURL": "Admin panel URL",
+    "ERRORSMTP": {
+      "SINGULAR": "Smtp za greške",
+      "PORT": "Smtp za greške port",
+      "SSL": "Smtp za greške SSL"
+    }
   }
 }

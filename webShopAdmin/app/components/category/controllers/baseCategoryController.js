@@ -63,7 +63,19 @@
                 vm.item.Url = vm.CreateFriendlyUrl(vm.item.Name);
         }
 
-        
+        $scope.$watch(function () {
+            if (vm.item.ParentCategoryID != null)
+                return vm.item.ParentCategoryID;
+        }, function () {
+            if(vm.item.ParentCategoryID != null && vm.ID == -1)
+                GetSortIndex(vm.item.ParentCategoryID);
+        })
+
+        function GetSortIndex(parentCategoryID) {
+            BaseService.GetByParameters('category', 'GetSortIndex', [{ name: 'parentCategoryID', value: parentCategoryID }]).then(function (response) {
+                vm.item.SortIndex = response.data;
+            })
+        }
 
         
     }

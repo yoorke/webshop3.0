@@ -9,6 +9,7 @@
     <delete>category_delete</delete>
     <getByCategoryID>category_getByCategoryID</getByCategoryID>
     <getRoot>category_getRoot</getRoot>
+    <getSortIndex>category_getSortIndex</getSortIndex>
   </Class>
   <Class>
     <name>categoryBanner</name>

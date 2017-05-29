@@ -46,19 +46,19 @@
   <ItemGroup>
     <Reference Include="DAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\DAL\bin\Debug\DAL.dll</HintPath>
+      <HintPath>..\..\..\Framework\DAL\bin\Debug\DAL.dll</HintPath>
     </Reference>
     <Reference Include="GenericBE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\GenericBE\bin\Debug\GenericBE.dll</HintPath>
+      <HintPath>..\..\..\Framework\GenericBE\bin\Debug\GenericBE.dll</HintPath>
     </Reference>
     <Reference Include="GenericIRepositoryInterfaces, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\GenericIRepositoryInterfaces\bin\Debug\GenericIRepositoryInterfaces.dll</HintPath>
+      <HintPath>..\..\..\Framework\GenericIRepositoryInterfaces\bin\Debug\GenericIRepositoryInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="GenericRepositories, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\GenericRepositories\bin\Debug\GenericRepositories.dll</HintPath>
+      <HintPath>..\..\..\Framework\GenericRepositories\bin\Debug\GenericRepositories.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -137,7 +137,7 @@
     </Reference>
     <Reference Include="Utility, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Framework\Utility\bin\Debug\Utility.dll</HintPath>
+      <HintPath>..\..\..\Framework\Utility\bin\Debug\Utility.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>

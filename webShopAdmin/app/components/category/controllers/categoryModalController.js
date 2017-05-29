@@ -12,13 +12,12 @@
         $controller('BaseSaveModalController', { vm: vm, $uibModalInstance: $uibModalInstance });
         $controller('CommonController', { vm: vm, $uibModalInstance: $uibModalInstance });
 
-        vm.showModalLoader = true;
-
         init();
 
         function init() {
             vm.ID = parameters.ID;
-            if (parameters.ID > 0)
+            if (parameters.ID > 0) {
+                vm.showModalLoader = true;
                 vm.BaseGetItemByID(parameters.modelName, parameters.ID).then(function (response) {
                     vm.item = response.data;
                     //vm.LoadAttributes();
@@ -26,6 +25,7 @@
                         vm.item.Attributes = [];
                     vm.showModalLoader = false;
                 });
+            }
             else {
                 vm.item = {};
                 vm.item.Attributes = [];
