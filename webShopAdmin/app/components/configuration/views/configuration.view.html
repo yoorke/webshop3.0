@@ -38,6 +38,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="form-group">
+                                        <label for="cmbLanguage"><span translate="LANGUAGE.SINGULAR"></span></label>
+                                        <drop-down-control control-id="cmbLanguage" selected="vm.item.DefaultLanguage"
+                                                           model-name="language" get-name="get" model-property="Name"
+                                                           required="true" allow-add-new="false">
+                                        </drop-down-control>
+                                    </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -124,23 +131,65 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <label for="txtCategoryImageWidth"><span translate="CATEGORY.IMAGE.WIDTH"></span></label>
+                                        <label for="txtCategoryImageWidth"><span translate="CATEGORY.IMAGE.DIMENSION"></span></label>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <input type="text" id="txtCategoryImageWidth" name="txtCategoryImageWidth" class="form-control" ng-model="vm.item.CategoryImageWidth" />
                                             </div>
                                             <div class="col-md-6">
+                                                <!--<label for="txtCategoryImageHeight"><span translate="CATEGORY.IMAGE.HEIGHT"></span></label>-->
                                                 <input type="text" id="txtCategoryImageHeight" name="txtCategoryImageHeight" class="form-control" ng-model="vm.item.CategoryImageHeight" />
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <label for="txtCategoryImageHeight"><span translate="CATEGORY.IMAGE.HEIGHT"></span></label>
-                                        
+                                        <label for="txtMainName"><span translate="PRODUCT.IMAGES.MAIN-NAME"></span></label>
+                                        <input type="text" id="txtMainName" name="txtMainName" class="form-control" ng-model="vm.item.MainName" />
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtMainImageWidth"><span translate="PRODUCT.IMAGES.MAIN-IMAGE-DIMENSION"></span></label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtMainImageWidth" name="txtMainImageWidth" class="form-control" ng-model="vm.item.MainWidth" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtMainImageHeight" name="txtMainImageHeight" class="form-control" ng-model="vm.item.MainHeight" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtListName"><span translate="PRODUCT.IMAGES.LIST-NAME"></span></label>
+                                        <input type="text" id="txtListName" name="txtListName" class="form-control" ng-model="vm.item.ListName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtListImageWidth"><span translate="PRODUCT.IMAGES.LIST-IMAGE-DIMENSION"></span></label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtListImageWidth" name="txtListImageWidth" class="form-control" ng-model="vm.item.ListWidth" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtListImageHeight" name="txtListImageHeight" class="form-control" ng-model="vm.item.ListHeight" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtThumbName"><span translate="PRODUCT.IMAGES.THUMB-NAME"></span></label>
+                                        <input type="text" id="txtThumbName" name="txtThumbName" class="form-control" ng-model="vm.item.ThumbName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtThumbImageWidth"><span translate="PRODUCT.IMAGES.THUMB-IMAGE-DIMENSION"></span></label>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtThumbImageWidth" name="txtThumbImageWidth" class="form-control" ng-model="vm.item.ThumbWidth" />
+                                            </div>
+                                            <div class="col-md-6">
+                                                <input type="text" id="txtThumbImageHeight" name="txtThumbImageHeight" class="form-control" ng-model="vm.item.ThumbHeight" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
 
-                                    </div>
                                 </div>
                             </div>
                         </uib-tab>
@@ -148,16 +197,88 @@
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.PRODUCTS"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="chkShowIfNotInStock"><span translate="PRODUCT.SHOWIFNOTINSTOCK"></span></label>
+                                        <input type="checkbox" id="chkShowIfNotInStock" name="chkShowIfNotInStock" class="checkbox" ng-model="vm.item.ShowIfNotInStock" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkLeadingZerosCode"><span translate="PRODUCT.LEADINGZEROSCODE"></span></label>
+                                        <input type="checkbox" id="chkLeadingZerosCode" name="chkLeadingZerosCode" class="checkbox" ng-model="vm.item.LeadingZerosCode" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkLeadingZerosBarcode"><span translate="PRODUCT.LEADINGZEROSBARCODE"></span></label>
+                                        <input type="checkbox" id="chkLeadingZerosBarcode" name="chkLeadingZerosBarcode" class="checkbox" ng-model="vm.item.LeadingZerosBarcode" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkFullProductUrl"><span translate="PRODUCT.FULLURL"></span></label>
+                                        <input type="checkbox" id="chkFullProductUrl" name="chkFullProductUrl" class="checkbox" ng-model="vm.item.FullProductUrl" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkProductInMultipleCategories"><span translate="PRODUCT.MULTIPLECATEGORIES"></span></label>
+                                        <input type="checkbox" id="chkProductInMultipleCategories" name="chkProductInMultipleCategories" class="checkbox" ng-model="vm.item.ProductInMultipleCategories" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkIncludeSubcategories"><span translate="PRODUCT.INCLUDESUBCATEGORIES"></span></label>
+                                        <input type="checkbox" id="chkIncludeSubcategories" name="chkIncludeSubcategories" class="checkbox" ng-model="vm.item.IncludeSubcategoriesInProductList" /> 
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtDefaultDescription"><span translate="PRODUCT.DEFAULTDESCRIPTION"></span></label>
+                                        <textarea id="txtDefaultDescription" name="txtDefaultDescription" class="form-control" ng-model="vm.item.ProductDefaultDescription"></textarea>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="chkUpdateProductFromExternalApplication"><span translate="PRODUCT.UPDATEFROMEXTERNALAPPLICATION"></span></label>
+                                        <input type="checkbox" id="chkUpdateProductFromExternalAppliacation" name="chkUpdateProductFromExternalApplication" class="checkbox" ng-model="vm.item.UpdateProductFromExternalApplication" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkExportProducts"><span translate="PRODUCT.EXPORTPRODUCTS"></span></label>
+                                        <input type="checkbox" id="chkExportProducts" name="chkExportProducts" class="checkbox" ng-model="vm.item.ExportProducts" />
+                                    </div>
+                                </div>
+                            </div>
                         </uib-tab>
                         <uib-tab index="4">
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.DISCOUNT"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="chkUserDiscountVisible"><span translate="DISCOUNT.USERDISCOUNTVISIBLE"></span></label>
+                                        <input type="checkbox" id="chkUserDiscountVisible" name="chkUserDiscountVisible" class="checkbox" ng-model="vm.item.UserDiscountVisible" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkOrderDiscountVisible"><span translate="DISCOUNT.ORDERDISCOUNTVISIBLE"></span></label>
+                                        <input type="checkbox" id="chkOrderDiscountVisible" name="chkOrderDiscountVisible" class="checkbox" ng-model="vm.item.OrderDiscountVisible" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="chkUserDiscountOnlyOnProductNotOnPromotion"><span translate="DISCOUNT.ONLYONNOTONPROMOTION"></span></label>
+                                        <input type="checkbox" id="chkUserDiscountOnlyOnProductNotOnPromotion" name="chkUserDiscountOnlyOnProductNotOnPromotion" class="checkbox" ng-model="vm.item.UserDiscountOnlyOnProductNotOnPromotion" />
+                                    </div>
+                                </div>
+                            </div>
                         </uib-tab>
                         <uib-tab index="5">
                             <uib-tab-heading>
                                 <span translate="CONFIGURATION.DELIVERY"></span>
                             </uib-tab-heading>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="txtDeliveryCost"><span translate="DELIVERY.COST"></span></label>
+                                        <input type="text" id="txtDeliveryCost" name="txtDeliveryCost" class="form-control" ng-model="vm.item.DeliveryCost" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="txtFreeDeliveryTotalValue"><span translate="DELIVERY.FREEDELIVERYVALUE"></span></label>
+                                        <input type="text" id="txtFreeDeliveryTotalValue" name="txtFreeDeliveryTotalValue" class="form-control" ng-model="vm.item.FreeDeliveryTotalValue" />
+                                    </div>
+                                </div>
+                            </div>
                         </uib-tab>
                     </uib-tabset>
                 </div>

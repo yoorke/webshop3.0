@@ -59,7 +59,8 @@
     "NEW": "Nova kategorija",
     "IMAGE": {
       "WIDTH": "Širina slike kategorije",
-      "HEIGHT": "Visina slike kategorije"
+      "HEIGHT": "Visina slike kategorije",
+      "DIMENSION": "Dimenzije slike kategorije"
     }
   },
   "ATTRIBUTE": {
@@ -116,5 +117,35 @@
       "PORT": "Smtp za greške port",
       "SSL": "Smtp za greške SSL"
     }
-  }
+  },
+  "PRODUCT": {
+    "IMAGES": {
+      "MAIN-IMAGE-DIMENSION": "Dimenzija za main",
+      "LIST-IMAGE-DIMENSION": "Dimenzija za list",
+      "THUMB-IMAGE-DIMENSION": "Dimenzija za thumb",
+      "MAIN-NAME": "Main naziv",
+      "LIST-NAME": "List naziv",
+      "THUMB-NAME": "Thumb naziv"
+    },
+    "SHOWIFNOTINSTOCK": "Prikaži ukoliko nije na stanju",
+    "DEFAULTDESCRIPTION": "Podrazumevani opis",
+    "UPDATEFROMEXTERNALAPPLICATION": "Update iz externe aplikacije",
+    "EXPORTPRODUCTS": "Izvoz proizvoda",
+    "LEADINGZEROSCODE": "Vodeće nule u šifri",
+    "LEADINGZEROSBARCODE": "Vodeće nule u barkodu",
+    "FULLURL": "Puna putanja",
+    "MULTIPLECATEGORIES": "Proizvod u više kategorija",
+    "INCLUDESUBCATEGORIES": "Uključi podkategorije u listu"
+  },
+  "DISCOUNT": {
+    "USERDISCOUNTVISIBLE": "Omogući popust za kupca",
+    "ORDERDISCOUNTVISIBLE": "Omogući popust za porudžbinu",
+    "ONLYONNOTONPROMOTION": "Popust samo za artikle koji nisu na promociji"
+  },
+  "DELIVERY": {
+    "COST": "Cena dostave",
+    "FREEDELIVERYVALUE": "Iznos za besplatnu dostavu"
+  },
+  "LANGUAGE": {"SINGULAR": "Jezik"}
+
 }
