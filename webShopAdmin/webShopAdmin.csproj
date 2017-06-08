@@ -97,6 +97,7 @@
     <Content Include="app\components\base\controllers\commonController.js" />
     <Content Include="app\components\base\controllers\commonFunctionsController.js" />
     <Content Include="app\components\base\controllers\defaultController.js" />
+    <Content Include="app\components\base\controllers\defaultItemController.js" />
     <Content Include="app\components\base\controllers\defaultModalController.js" />
     <Content Include="app\components\base\controllers\defaultModalListController.js" />
     <Content Include="app\components\base\controllers\initController.js" />
