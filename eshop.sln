@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Models", "eshop.Model
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webShopAdmin", "webShopAdmin\webShopAdmin.csproj", "{F865CABF-E0FC-4B36-9661-B731F1A62245}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F865CABF-E0FC-4B36-9661-B731F1A62245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F865CABF-E0FC-4B36-9661-B731F1A62245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F865CABF-E0FC-4B36-9661-B731F1A62245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

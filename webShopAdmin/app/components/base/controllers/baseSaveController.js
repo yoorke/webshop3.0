@@ -17,7 +17,7 @@
                 BaseService.Save(modelName, vm.item).then(function (response) {
                     GlobalService.SetLoaderStatus(false);
                     if (response.status == 200) {
-                        $translate("SAVE.SUCCESS").then(function (translate) {
+                        $translate("ACTION.SAVE.SUCCESS").then(function (translate) {
                             Flash.create('success', translate);
                         });
                         GlobalService.SetSavedItemStatus(true);

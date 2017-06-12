@@ -9,6 +9,7 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.Web.Hosting;
+using Common;
 
 namespace eshopAPI.Controllers
 {
@@ -31,8 +32,8 @@ namespace eshopAPI.Controllers
                         {
                             if (content.Headers.ContentType.MediaType == "image/png" || content.Headers.ContentType.MediaType == "image/jpeg" || content.Headers.ContentType.MediaType == "image/svg")
                             {
-                                extension = getExtension(content.Headers.ContentType.MediaType);
-                                ImageFormat format = getImageFormat(content.Headers.ContentType.MediaType);
+                                extension = new ImageHandler().GetExtension(content.Headers.ContentType.MediaType);
+                                ImageFormat format = new ImageHandler().GetImageFormat(content.Headers.ContentType.MediaType);
                                 Image image = Image.FromStream(stream);
                                 var name = content.Headers.ContentDisposition.Name;
                                 string filepath = HostingEnvironment.MapPath("~/images");
@@ -53,26 +54,8 @@ namespace eshopAPI.Controllers
                 throw new HttpResponseException(Request.CreateResponse(HttpStatusCode.BadGateway));
         }
 
-        private string getExtension(string type)
-        {
-            switch (type)
-            {
-                case "image/png": return ".png";
-                case "image/jpeg": return ".jpg";
-                case "image/svg": return ".svg";
-            }
-            return string.Empty;
-        }
+        
 
-        private ImageFormat getImageFormat(string type)
-        {
-            switch(type)
-            {
-                case "image/png": return ImageFormat.Png;
-                case "image/jpeg": return ImageFormat.Jpeg;
-                case "image/svg": return ImageFormat.Icon;
-            }
-            return null;
-        }
+        
     }
 }

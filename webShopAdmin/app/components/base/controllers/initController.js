@@ -19,6 +19,7 @@
         vm.itemModalController = $route.current.$$route.itemModalController;
         vm.itemModalSize = $route.current.$$route.itemModalSize;
         vm.itemAddedMethod = $route.current.$$route.itemAddedMethod;
+        vm.defaultID = $route.current.$$route.defaultID;
 
         //$scope.$watch(function(){
             //if (GlobalService.GetCurrentUser() != null)

@@ -9,7 +9,7 @@
             <div class="row margin-top-1">
                 <div class="col-lg-12">
                     <div class="btn-group">
-                        <button id="btnSave" class="btn btn-primary" ng-click="vm.BaseSaveItem('Configuration')"><span class="fa fa-fw fa-floppy-o"></span><span translate="ACTION.SAVE.BUTTON"></span></button>
+                        <button id="btnSave" type="button" class="btn btn-primary" ng-click="vm.BaseSaveItem('Configuration')"><span class="fa fa-fw fa-floppy-o"></span><span translate="ACTION.SAVE.BUTTON"></span></button>
                     </div>
                 </div>
             </div>
@@ -31,7 +31,7 @@
                                         <label for="txtImageUrl"><span translate="IMAGEURL"></span></label>
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <img ng-src="{{vm.item.WebShopLogoUrl != null ? vm.apiUrl + 'images/' + vm.item.WebShopLogoUrl : ''}}" />
+                                                <img ng-src="{{vm.item.WebShopLogoUrl != null ? vm.apiUrl + 'images/' + vm.item.WebShopLogoUrl : ''}}" style="width:30px" />
                                             </div>
                                             <div class="col-md-6">
                                                 <div id="btnBrowse" class="btn btn-default btn-upload pull-right" upload-button url="{{vm.apiUrl}}api/Common/Upload" on-success="vm.UploadButtonSuccess(response)"><span translate="BROWSE"></span></div>

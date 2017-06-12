@@ -1,13 +1,13 @@
 ﻿(function () {
     'user strict';
 
-    angular.module('webShopAdmin').controller('DefaultItemController', DefaultItemController);
+    angular.module('webShopAdmin').controller('ConfigurationController', ConfigurationController);
 
-    DefaultItemController.$inject = ['$controller', 'GlobalService'];
+    ConfigurationController.$inject = ['$controller', 'GlobalService'];
 
-    function DefaultItemController($controller, GlobalService) {
+    function ConfigurationController($controller, GlobalService) {
         var vm = this;
-        
+        vm.UploadButtonSuccess = UploadButtonSuccess;
 
         $controller('InitController', { vm: vm });
         $controller('BaseGetByIDController', { vm: vm });
@@ -24,8 +24,8 @@
             vm.apiUrl = GlobalService.GetApiUrl();
         }
 
-        
-            
-        
+        function UploadButtonSuccess(response) {
+            vm.item.WebShopLogoUrl = response.data;
+        }
     }
 })()

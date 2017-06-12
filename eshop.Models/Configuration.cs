@@ -134,5 +134,8 @@ namespace eshop.Models
 
         [SqlFieldNameAttribute("categoryImageHeight")]
         public int CategoryImageHeight { get; set; }
+
+        [SqlFieldNameAttribute("defaultLanguageID", "Language", "id", Relation.OneToOne)]
+        public Language DefaultLanguage { get; set; }
     }
 }

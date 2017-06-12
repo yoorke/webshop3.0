@@ -82,7 +82,7 @@
                 itemAddedMethod: 'reload'
             })
             .when('/configuration', {
-                controller: 'DefaultController',
+                controller: 'ConfigurationController',
                 controllerAs: 'vm',
                 templateUrl: 'app/components/configuration/views/configuration.view.html',
                 parentModelName: [],
@@ -95,7 +95,8 @@
                 itemModalView: '',
                 itemModalController: '',
                 itemModalSize: '',
-                itemAddedMethod: ''
+                itemAddedMethod: '',
+                defaultID: 1
             });
 
         $translateProvider
