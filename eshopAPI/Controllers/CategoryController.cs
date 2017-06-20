@@ -98,5 +98,14 @@ namespace eshopAPI.Controllers
 
             return categoriesTable;
         }
+
+        [HttpPost]
+        [ActionName("UploadImage")]
+        public HttpResponseMessage UploadImage()
+        {
+            eshopAPI.ConfigurationHandler config = eshopAPI.ConfigurationHandler.Instance;
+            ConfigurationHandler con = ConfigurationHandler.Instance;
+            return Request.CreateResponse(HttpStatusCode.OK);
+        }
     }
 }
