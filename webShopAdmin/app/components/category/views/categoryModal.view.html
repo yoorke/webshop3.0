@@ -43,7 +43,7 @@
                                             <img class="icon" ng-src="{{vm.item.ImageUrl != null ? vm.apiUrl + 'images/' + vm.item.ImageUrl : ''}}" />
                                         </div>
                                         <div class="col-md-6">
-                                            <div id="btnBrowse" class="btn btn-default btn-upload pull-right" upload-button url="{{vm.apiUrl}}api/Common/Upload" on-success="vm.UploadButtonOnSuccess(response)" on-upload="vm.UploadButtonOnUpload(files)" on-error="vm.UploadButtonOnError(response)"><span translate="BROWSE"></span></div>
+                                            <div id="btnBrowse" class="btn btn-default btn-upload pull-right" upload-button url="{{vm.apiUrl}}api/Common/UploadImage" on-success="vm.UploadButtonOnSuccess(response)" on-upload="vm.UploadButtonOnUpload(files)" on-error="vm.UploadButtonOnError(response)"><span translate="BROWSE"></span></div>
                                         </div>
                                     </div>
                                 </div>
