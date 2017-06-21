@@ -8,14 +8,27 @@ using eshop.Models;
 using GenericRepositories;
 using GenericBE;
 using System.Data;
+using RepositoryInterfaces;
+using eshopAPI.DIConfiguration;
+using eshopAPI.ConfigurationHandler;
 
 namespace eshopAPI.Controllers
 {
     public class CategoryController : BaseController
     {
+        private IGenericRepository<Category> _repository;
+        //private IConfigurationHandler _configurationHandler;
+
+        public CategoryController(IGenericRepository<Category> repository)
+        {
+            _repository = repository;
+            //_configurationHandler = configurationHandler;
+        }
+
         public IEnumerable<Category> Get()
         {
-            return new GenericRepository<Category>().GetAll(null, true, false);
+            //return new GenericRepository<Category>().GetAll(null, true, false);
+            return _repository.GetAll(null, true, false);
         }
 
         public Category Get(int id)
@@ -28,7 +41,8 @@ namespace eshopAPI.Controllers
             //dummy parameters
             List<QueryParameter> parameters = new List<QueryParameter>();
             parameters.Add(new QueryParameter("id", 1));
-            return new GenericRepository<Category>().GetByParameter("getRoot", parameters, true, false);
+            //return new GenericRepository<Category>().GetByParameter("getRoot", parameters, true, false);
+            return _repository.GetByParameter("getRoot", parameters, true, false);
         }
 
         [HttpGet]
@@ -103,8 +117,8 @@ namespace eshopAPI.Controllers
         [ActionName("UploadImage")]
         public HttpResponseMessage UploadImage()
         {
-            eshopAPI.ConfigurationHandler config = eshopAPI.ConfigurationHandler.Instance;
-            ConfigurationHandler con = ConfigurationHandler.Instance;
+            
+            
             return Request.CreateResponse(HttpStatusCode.OK);
         }
     }

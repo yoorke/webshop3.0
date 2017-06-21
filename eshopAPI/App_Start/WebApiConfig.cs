@@ -6,6 +6,10 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
+using Microsoft.Practices.Unity;
+using GenericRepositories;
+using RepositoryInterfaces;
+using eshop.Models;
 
 namespace eshopAPI
 {
@@ -34,6 +38,12 @@ namespace eshopAPI
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            var container = new UnityContainer();
+            container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>(new HierarchicalLifetimeManager());
+            container.RegisterType<IGenericRepository<Configuration>, GenericRepository<Configuration>>(new HierarchicalLifetimeManager());
+            //container.RegisterType<ConfigurationHandler.IConfigurationHandler, ConfigurationHandler.ConfigurationHandler>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
         }
     }
 }

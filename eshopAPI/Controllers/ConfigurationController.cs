@@ -6,11 +6,18 @@ using System.Net.Http;
 using System.Web.Http;
 using eshop.Models;
 using GenericRepositories;
+using RepositoryInterfaces;
 
 namespace eshopAPI.Controllers
 {
     public class ConfigurationController : BaseController
     {
+        private IGenericRepository<Configuration> _repository;
+
+        public ConfigurationController(IGenericRepository<Configuration> repository)
+        {
+            _repository = repository;
+        }
         public IEnumerable<Configuration> Get()
         {
             return new GenericRepository<Configuration>().GetAll(null, false, false);

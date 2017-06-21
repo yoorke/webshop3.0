@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenericRepositories;
+using eshop.Models;
 
-namespace eshopAPI
+namespace eshopAPI.ConfigurationHandler
 {
     public class ConfigurationHandler
     {
@@ -21,12 +22,22 @@ namespace eshopAPI
             get { return _instance.Value; }
         }
 
-        public eshop.Models.Configuration Values { get; set; }
+        private eshop.Models.Configuration _values { get; set; }
 
         private void loadValues()
         {
-            Values = new GenericRepository<eshop.Models.Configuration>().GetByID(1);
+            _values = new GenericRepository<eshop.Models.Configuration>().GetByID(1);
             
+        }
+
+        public Configuration GetConfiguration()
+        {
+            return _values;
+        }
+
+        public object GetValue(string name)
+        {
+            return null;
         }
     }
 }
