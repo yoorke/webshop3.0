@@ -30,9 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GenericBE, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\GenericBE.dll</HintPath>
+    <Reference Include="GenericBE">
+      <HintPath>..\..\..\Framework\GenericBE\bin\Debug\GenericBE.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

@@ -137,5 +137,11 @@ namespace eshop.Models
 
         [SqlFieldNameAttribute("defaultLanguageID", "Language", "id", Relation.OneToOne)]
         public Language DefaultLanguage { get; set; }
+
+        [SqlFieldNameAttribute("productImagePath")]
+        public string ProductImagePath { get; set; }
+
+        [SqlFieldNameAttribute("categoryImagePath")]
+        public string CategoryImagePath { get; set; }
     }
 }

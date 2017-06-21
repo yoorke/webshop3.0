@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using eshop.Models;
-using GenericRepositories;
+//using GenericRepositories;
 using GenericBE;
 using System.Data;
 using RepositoryInterfaces;
@@ -33,7 +33,8 @@ namespace eshopAPI.Controllers
 
         public Category Get(int id)
         {
-            return new GenericRepository<Category>().GetByID(id);
+            //return new GenericRepository<Category>().GetByID(id);
+            return _repository.GetByID(id);
         }
 
         public IEnumerable<Category> GetRoot()
@@ -65,24 +66,29 @@ namespace eshopAPI.Controllers
         {
             List<QueryParameter> parameters = new List<QueryParameter>();
             parameters.Add(new QueryParameter("parentCategoryID", parentCategoryID));
-            return (int)new GenericRepository<Category>().GetScalar("category", "getSortIndex", parameters);
+            //return (int)new GenericRepository<Category>().GetScalar("category", "getSortIndex", parameters);
+            return (int)_repository.GetScalar("category", "getSortIndex", parameters);
         }
 
         public IHttpActionResult Post([FromBody] Category category)
         {
-            category.ID = new GenericRepository<Category>().Insert(category);
+            //category.ID = new GenericRepository<Category>().Insert(category);
+            category.ID = _repository.Insert(category);
             return Ok(category);
         }
 
         public IHttpActionResult Put(int id, [FromBody] Category category)
         {
-            return Ok(new GenericRepository<Category>().Update(category));
+            //return Ok(new GenericRepository<Category>().Update(category));
+            return Ok(_repository.Update(category));
         }
 
         public IHttpActionResult Delete(int id)
         {
-            Category category = new GenericRepository<Category>().GetByID(id);
-            new GenericRepository<Category>().Delete(category);
+            //Category category = new GenericRepository<Category>().GetByID(id);
+            Category category = _repository.GetByID(id);
+            //new GenericRepository<Category>().Delete(category);
+            _repository.Delete(category);
             return Ok(category);
         }
 
@@ -117,7 +123,7 @@ namespace eshopAPI.Controllers
         [ActionName("UploadImage")]
         public HttpResponseMessage UploadImage()
         {
-            
+            ConfigurationHandler.ConfigurationHandler configuration = ConfigurationHandler.ConfigurationHandler.Instance;
             
             return Request.CreateResponse(HttpStatusCode.OK);
         }
