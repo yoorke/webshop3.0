@@ -349,6 +349,10 @@
       <Project>{5ffde085-7726-48b0-be40-920762c30c1f}</Project>
       <Name>eshop.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\eshopBL\eshopBL.csproj">
+      <Project>{a7a6c2f4-c12d-4848-8ce8-76d21e2150a6}</Project>
+      <Name>eshopBL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

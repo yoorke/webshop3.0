@@ -10,6 +10,7 @@ using Microsoft.Practices.Unity;
 using GenericRepositories;
 using RepositoryInterfaces;
 using eshop.Models;
+using eshopBL;
 
 namespace eshopAPI
 {
@@ -43,6 +44,7 @@ namespace eshopAPI
             container.RegisterType<IGenericRepository<Category>, GenericRepository<Category>>(new HierarchicalLifetimeManager());
             container.RegisterType<IGenericRepository<Configuration>, GenericRepository<Configuration>>(new HierarchicalLifetimeManager());
             //container.RegisterType<ConfigurationHandler.IConfigurationHandler, ConfigurationHandler.ConfigurationHandler>(new HierarchicalLifetimeManager());
+            container.RegisterType<IImageHandler, ImageHandler>(new HierarchicalLifetimeManager());
             config.DependencyResolver = new UnityResolver(container);
         }
     }

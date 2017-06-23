@@ -11,6 +11,7 @@ using System.Data;
 using RepositoryInterfaces;
 using eshopAPI.DIConfiguration;
 using eshopAPI.ConfigurationHandler;
+using eshopBL;
 
 namespace eshopAPI.Controllers
 {
@@ -121,7 +122,7 @@ namespace eshopAPI.Controllers
 
         [HttpPost]
         [ActionName("UploadImage")]
-        public HttpResponseMessage UploadImage()
+        public HttpResponseMessage UploadImage([Inject] IImageHandler imageHandler)
         {
             ConfigurationHandler.ConfigurationHandler configuration = ConfigurationHandler.ConfigurationHandler.Instance;
             
