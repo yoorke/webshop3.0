@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.Web;
 
 namespace eshopBL
 {
     public interface IImageHandler
     {
-        void SaveImage(Image image, ImageFormat format, string path);
-        void SaveThumb(Image image, ImageFormat format, int width, int height, string path, string sufix);
+        string SaveImage(HttpPostedFile file, string path, string[] allowedExtensions);
+        bool SaveImage(HttpPostedFile file, int width, int height, string path, string sufix, string[] allowedExtensions);
         string GetExtension(string type);
         ImageFormat GetImageFormat(string type);
-
+        string ParseExtension(string filename);
     }
 }

@@ -143,5 +143,12 @@ namespace eshop.Models
 
         [SqlFieldNameAttribute("categoryImagePath")]
         public string CategoryImagePath { get; set; }
+
+        [SqlFieldNameAttribute("categoryImageAllowedExtensions")]
+        public string CategoryImageAllowedExtensions { get; set; }
+
+        public string[] CategoryImageAllowedExtensionsList {
+            get { return CategoryImageAllowedExtensions != null ? CategoryImageAllowedExtensions.Split(';') : new string[] { }; }
+        }
     }
 }

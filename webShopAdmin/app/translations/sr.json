@@ -60,7 +60,9 @@
     "IMAGE": {
       "WIDTH": "Širina slike kategorije",
       "HEIGHT": "Visina slike kategorije",
-      "DIMENSION": "Dimenzije slike kategorije"
+      "DIMENSION": "Dimenzije slike kategorije",
+      "PATH": "Putanja za kategorije",
+      "ALLOWEDEXTENSIONS": "Format slika"
     }
   },
   "ATTRIBUTE": {

@@ -6,26 +6,41 @@ using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.Web;
 
 namespace eshopBL
 {
     public class ImageHandler : IImageHandler
     {
-        public void SaveImage(Image image, ImageFormat format, string path)
+        public string SaveImage(HttpPostedFile file, string path, string[] allowedExtensions)
         {
-            using (Bitmap bitmap = new Bitmap(image))
-            {
-                bitmap.Save(path, format);
-            }
+            if (file.ContentLength <= 0)
+                throw new Exception("File size can not be 0");
+
+            if (!allowedExtensions.Contains(file.FileName.Substring(file.FileName.LastIndexOf('.'))))
+                throw new Exception("Bad file extension");
+
+            string filename = new Common().GetFriendlyString(file.FileName);
+
+            file.SaveAs(HttpContext.Current.Server.MapPath("~/images/" + path + filename));
+
+            return filename;
+            //using (Bitmap bitmap = new Bitmap(image))
+            //{
+                //bitmap.Save(path, format);
+            //}
         }
 
-        public void SaveThumb(Image image, ImageFormat format, int width, int height, string path, string sufix)
+        public bool SaveImage(HttpPostedFile file, int width, int height, string path, string sufix, string[] allowedExtensions)
         {
-            string extenstion = path.Substring(path.LastIndexOf('.'));
-            string imageName = path.Substring(0, path.LastIndexOf('.'));
 
-            Image thumb = createThumb(image, width, height);
-            thumb.Save(imageName + "-" + (sufix != string.Empty ? "-" + sufix : string.Empty) + extenstion);
+            //string extenstion = path.Substring(path.LastIndexOf('.'));
+            //string imageName = path.Substring(0, path.LastIndexOf('.'));
+
+            //Image thumb = createThumb(image, width, height);
+            //thumb.Save(imageName + "-" + (sufix != string.Empty ? "-" + sufix : string.Empty) + extenstion);
+
+            return true;
         }
 
         public string GetExtension(string type)
@@ -98,6 +113,11 @@ namespace eshopBL
 
             grPhoto.Dispose();
             return bmPhoto;
+        }
+
+        public string ParseExtension(string filename)
+        {
+            return filename.Substring(filename.LastIndexOf("."));
         }
 
     }

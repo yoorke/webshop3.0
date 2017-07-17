@@ -12,6 +12,7 @@ using RepositoryInterfaces;
 using eshopAPI.DIConfiguration;
 using eshopAPI.ConfigurationHandler;
 using eshopBL;
+using System.Web;
 
 namespace eshopAPI.Controllers
 {
@@ -125,8 +126,15 @@ namespace eshopAPI.Controllers
         public HttpResponseMessage UploadImage([Inject] IImageHandler imageHandler)
         {
             ConfigurationHandler.ConfigurationHandler configuration = ConfigurationHandler.ConfigurationHandler.Instance;
-            
-            return Request.CreateResponse(HttpStatusCode.OK);
+            HttpRequest request = HttpContext.Current.Request;
+
+            if (request.Files != null && request.Files.Count > 0 && request.Files[0] != null)
+            { 
+                string filename = imageHandler.SaveImage(request.Files[0], configuration.GetConfiguration().CategoryImagePath, configuration.GetConfiguration().CategoryImageAllowedExtensionsList);
+                return Request.CreateResponse(HttpStatusCode.OK, filename);
+            }
+            else
+                return Request.CreateResponse(HttpStatusCode.BadRequest);
         }
     }
 }
