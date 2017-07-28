@@ -7,6 +7,7 @@ using System.Drawing.Imaging;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Web;
+using System.Web.Hosting;
 
 namespace eshopBL
 {
@@ -14,33 +15,45 @@ namespace eshopBL
     {
         public string SaveImage(HttpPostedFile file, string path, string[] allowedExtensions)
         {
-            if (file.ContentLength <= 0)
-                throw new Exception("File size can not be 0");
-
-            if (!allowedExtensions.Contains(file.FileName.Substring(file.FileName.LastIndexOf('.'))))
-                throw new Exception("Bad file extension");
-
+            checkFile(file, allowedExtensions);
+            
             string filename = new Common().GetFriendlyString(file.FileName);
 
-            file.SaveAs(HttpContext.Current.Server.MapPath("~/images/" + path + filename));
+            file.SaveAs(HttpContext.Current.Server.MapPath("~/images/" + path + filename));            
 
             return filename;
+            
             //using (Bitmap bitmap = new Bitmap(image))
             //{
                 //bitmap.Save(path, format);
             //}
         }
 
-        public bool SaveImage(HttpPostedFile file, int width, int height, string path, string sufix, string[] allowedExtensions)
+        public string SaveImage(HttpPostedFile file, int width, int height, string path, string sufix, string[] allowedExtensions)
         {
+            checkFile(file, allowedExtensions);
 
+            Image image = Image.FromStream(file.InputStream);
+            Image thumb = createThumb(image, width, height);
+
+            string filename = new Common().GetFriendlyString(file.FileName);
+            thumb.Save(HostingEnvironment.MapPath("~/images/" + path + filename), ImageFormat.Jpeg);
             //string extenstion = path.Substring(path.LastIndexOf('.'));
             //string imageName = path.Substring(0, path.LastIndexOf('.'));
 
             //Image thumb = createThumb(image, width, height);
             //thumb.Save(imageName + "-" + (sufix != string.Empty ? "-" + sufix : string.Empty) + extenstion);
 
-            return true;
+            return filename;
+        }
+
+        private void checkFile(HttpPostedFile file, string[] allowedExtensions)
+        {
+            if (file.ContentLength <= 0)
+                throw new Exception("File size can not be 0");
+
+            if (!allowedExtensions.Contains(file.FileName.Substring(file.FileName.LastIndexOf('.'))))
+                throw new Exception("Bad file extension");            
         }
 
         public string GetExtension(string type)
