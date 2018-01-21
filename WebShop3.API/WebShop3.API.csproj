@@ -342,17 +342,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\eshop.Models\WebShop3.Models.csproj">
-      <Project>{5ffde085-7726-48b0-be40-920762c30c1f}</Project>
-      <Name>WebShop3.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\eshopBL\WebShop3.BusinessLogic.csproj">
+    <ProjectReference Include="..\WebShop3.BusinessLogic\WebShop3.BusinessLogic.csproj">
       <Project>{a7a6c2f4-c12d-4848-8ce8-76d21e2150a6}</Project>
       <Name>WebShop3.BusinessLogic</Name>
     </ProjectReference>
     <ProjectReference Include="..\WebShop3.Common\WebShop3.Common.csproj">
       <Project>{cd889983-fe89-4682-b5c5-cac2f39ce5e2}</Project>
       <Name>WebShop3.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebShop3.Models\WebShop3.Models.csproj">
+      <Project>{5ffde085-7726-48b0-be40-920762c30c1f}</Project>
+      <Name>WebShop3.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
