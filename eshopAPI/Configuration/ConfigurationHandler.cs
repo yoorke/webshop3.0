@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using GenericRepositories;
-using eshop.Models;
+using WebShop3.Models;
 using System.Configuration;
 
-namespace eshopAPI.ConfigurationHandler
+namespace WebShop3.API.ConfigurationHandler
 {
     public class ConfigurationHandler
     {
@@ -23,15 +23,15 @@ namespace eshopAPI.ConfigurationHandler
             get { return _instance.Value; }
         }
 
-        private eshop.Models.Configuration _values { get; set; }
+        private WebShop3.Models.Configuration _values { get; set; }
 
         private void loadValues()
         {
-            _values = new GenericRepository<eshop.Models.Configuration>().GetByID(int.Parse(ConfigurationManager.AppSettings["configurationID"]));
+            _values = new GenericRepository<WebShop3.Models.Configuration>().GetByID(int.Parse(ConfigurationManager.AppSettings["configurationID"]));
             
         }
 
-        public eshop.Models.Configuration GetConfiguration()
+        public WebShop3.Models.Configuration GetConfiguration()
         {
             return _values;
         }

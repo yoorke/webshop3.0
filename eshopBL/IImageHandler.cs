@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Web;
 
-namespace eshopBL
+namespace WebShop3.BusinessLogic
 {
     public interface IImageHandler
     {

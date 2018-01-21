@@ -7,7 +7,7 @@ using System.Net.Http;
 using System.Web.Http.Filters;
 using Utility;
 
-namespace eshopAPI.filters
+namespace WebShop3.API.filters
 {
     public class ExceptionFilter : ExceptionFilterAttribute, IExceptionFilter
     {

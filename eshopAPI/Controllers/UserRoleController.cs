@@ -6,9 +6,9 @@ using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using eshop.Models;
+using WebShop3.Models;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class UserRoleController : ApiController
     {

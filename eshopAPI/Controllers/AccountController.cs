@@ -13,11 +13,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
-using eshopAPI.Models;
-using eshopAPI.Providers;
-using eshopAPI.Results;
+using WebShop3.API.Models;
+using WebShop3.API.Providers;
+using WebShop3.API.Results;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     [Authorize]
     [RoutePrefix("api/Account")]

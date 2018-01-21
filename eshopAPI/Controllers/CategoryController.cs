@@ -4,17 +4,17 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using eshop.Models;
+using WebShop3.Models;
 //using GenericRepositories;
 using GenericBE;
 using System.Data;
 using RepositoryInterfaces;
-using eshopAPI.DIConfiguration;
-using eshopAPI.ConfigurationHandler;
-using eshopBL;
+using WebShop3.API.DIConfiguration;
+using WebShop3.API.ConfigurationHandler;
+using WebShop3.BusinessLogic;
 using System.Web;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class CategoryController : BaseController
     {

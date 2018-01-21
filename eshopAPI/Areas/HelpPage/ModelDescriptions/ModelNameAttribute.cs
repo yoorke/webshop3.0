@@ -1,6 +1,6 @@
 using System;
 
-namespace eshopAPI.Areas.HelpPage.ModelDescriptions
+namespace WebShop3.API.Areas.HelpPage.ModelDescriptions
 {
     /// <summary>
     /// Use this attribute to change the name of the <see cref="ModelDescription"/> generated for a type.

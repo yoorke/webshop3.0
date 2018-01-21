@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using eshop.Models;
+using WebShop3.Models;
 
-namespace eshopAPI.ConfigurationHandler
+namespace WebShop3.API.ConfigurationHandler
 {
     public interface IConfigurationHandler
     {

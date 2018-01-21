@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public class BundleConfig
     {

@@ -1,7 +1,7 @@
 using System.Web.Http;
 using System.Web.Mvc;
 
-namespace eshopAPI.Areas.HelpPage
+namespace WebShop3.API.Areas.HelpPage
 {
     public class HelpPageAreaRegistration : AreaRegistration
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace eshopBL
+namespace WebShop3.BusinessLogic
 {
     public class Class1
     {

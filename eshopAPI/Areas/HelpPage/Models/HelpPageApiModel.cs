@@ -2,9 +2,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Net.Http.Headers;
 using System.Web.Http.Description;
-using eshopAPI.Areas.HelpPage.ModelDescriptions;
+using WebShop3.API.Areas.HelpPage.ModelDescriptions;
 
-namespace eshopAPI.Areas.HelpPage.Models
+namespace WebShop3.API.Areas.HelpPage.Models
 {
     /// <summary>
     /// The model that represents an API displayed on the help page.

@@ -13,8 +13,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>eshopAPI</RootNamespace>
-    <AssemblyName>eshopAPI</AssemblyName>
+    <RootNamespace>WebShop3.API</RootNamespace>
+    <AssemblyName>WebShop3.API</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -341,17 +342,17 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Common\Common.csproj">
+    <ProjectReference Include="..\Common\WebShop3.Common.csproj">
       <Project>{cd889983-fe89-4682-b5c5-cac2f39ce5e2}</Project>
-      <Name>Common</Name>
+      <Name>WebShop3.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\eshop.Models\eshop.Models.csproj">
+    <ProjectReference Include="..\eshop.Models\WebShop3.Models.csproj">
       <Project>{5ffde085-7726-48b0-be40-920762c30c1f}</Project>
-      <Name>eshop.Models</Name>
+      <Name>WebShop3.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\eshopBL\eshopBL.csproj">
+    <ProjectReference Include="..\eshopBL\WebShop3.BusinessLogic.csproj">
       <Project>{a7a6c2f4-c12d-4848-8ce8-76d21e2150a6}</Project>
-      <Name>eshopBL</Name>
+      <Name>WebShop3.BusinessLogic</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

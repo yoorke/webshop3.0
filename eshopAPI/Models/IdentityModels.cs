@@ -5,9 +5,9 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Data.Entity;
-using eshop.Models;
+using WebShop3.Models;
 
-namespace eshopAPI.Models
+namespace WebShop3.API.Models
 {
     public class ApplicationUserLogin : IdentityUserLogin<int> { }
     public class ApplicationUserClaim : IdentityUserClaim<int> { }

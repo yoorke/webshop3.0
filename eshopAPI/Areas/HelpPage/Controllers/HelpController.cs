@@ -1,10 +1,10 @@
 using System;
 using System.Web.Http;
 using System.Web.Mvc;
-using eshopAPI.Areas.HelpPage.ModelDescriptions;
-using eshopAPI.Areas.HelpPage.Models;
+using WebShop3.API.Areas.HelpPage.ModelDescriptions;
+using WebShop3.API.Areas.HelpPage.Models;
 
-namespace eshopAPI.Areas.HelpPage.Controllers
+namespace WebShop3.API.Areas.HelpPage.Controllers
 {
     /// <summary>
     /// The controller that will handle requests for the help page.

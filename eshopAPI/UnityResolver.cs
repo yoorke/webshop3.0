@@ -5,7 +5,7 @@ using System.Web;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Dependencies;
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public class UnityResolver : IDependencyResolver
     {

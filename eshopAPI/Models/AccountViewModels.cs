@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace eshopAPI.Models
+namespace WebShop3.API.Models
 {
     // Models returned by AccountController actions.
 

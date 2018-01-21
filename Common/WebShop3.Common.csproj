@@ -7,8 +7,8 @@
     <ProjectGuid>{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common</RootNamespace>
-    <AssemblyName>Common</AssemblyName>
+    <RootNamespace>WebShop3.Common</RootNamespace>
+    <AssemblyName>WebShop3.Common</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

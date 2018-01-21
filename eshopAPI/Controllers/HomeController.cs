@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class HomeController : Controller
     {

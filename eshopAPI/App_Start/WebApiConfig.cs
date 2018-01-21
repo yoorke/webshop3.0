@@ -9,10 +9,10 @@ using System.Web.Http.Cors;
 using Microsoft.Practices.Unity;
 using GenericRepositories;
 using RepositoryInterfaces;
-using eshop.Models;
-using eshopBL;
+using WebShop3.Models;
+using WebShop3.BusinessLogic;
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public static class WebApiConfig
     {
@@ -23,7 +23,7 @@ namespace eshopAPI
             config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             config.SuppressDefaultHostAuthentication();
             config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
-            config.Filters.Add(new eshopAPI.filters.ExceptionFilter());
+            config.Filters.Add(new WebShop3.API.filters.ExceptionFilter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();

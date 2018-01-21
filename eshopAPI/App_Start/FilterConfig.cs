@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public class FilterConfig
     {

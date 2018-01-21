@@ -4,11 +4,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using eshop.Models;
+using WebShop3.Models;
 using GenericRepositories;
 using GenericBE;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class MenuItemController : BaseController
     {

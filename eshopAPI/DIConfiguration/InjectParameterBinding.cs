@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Http.Controllers;
 using System.Web.Http.Metadata;
 
-namespace eshopAPI.DIConfiguration
+namespace WebShop3.API.DIConfiguration
 {
     public class InjectParameterBinding : HttpParameterBinding
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using Newtonsoft.Json;
-using eshop.Models;
+using WebShop3.Models;
 
-namespace eshopAPI.Models
+namespace WebShop3.API.Models
 {
     // Models used as parameters to AccountController actions.
 

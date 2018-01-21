@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace eshop.Models
+namespace WebShop3.Models
 {
     public class UserRole : BaseEntity
     {

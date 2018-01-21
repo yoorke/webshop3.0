@@ -4,9 +4,9 @@ using System.Linq;
 using Microsoft.Owin;
 using Owin;
 
-[assembly: OwinStartup(typeof(eshopAPI.Startup))]
+[assembly: OwinStartup(typeof(WebShop3.API.Startup))]
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public partial class Startup
     {

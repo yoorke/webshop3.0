@@ -5,7 +5,7 @@ using System.Security.Claims;
 using System.Web;
 using System.Web.Http;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class BaseController : ApiController
     {

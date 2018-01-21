@@ -1,17 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshopAPI", "eshopAPI\eshopAPI.csproj", "{0B815C33-FA1B-46CD-9B3B-8F72A6987D7B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop3.API", "eshopAPI\WebShop3.API.csproj", "{0B815C33-FA1B-46CD-9B3B-8F72A6987D7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshop.Models", "eshop.Models\eshop.Models.csproj", "{5FFDE085-7726-48B0-BE40-920762C30C1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop3.Models", "eshop.Models\WebShop3.Models.csproj", "{5FFDE085-7726-48B0-BE40-920762C30C1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webShopAdmin", "webShopAdmin\webShopAdmin.csproj", "{F865CABF-E0FC-4B36-9661-B731F1A62245}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop3.Admin", "webShopAdmin\WebShop3.Admin.csproj", "{F865CABF-E0FC-4B36-9661-B731F1A62245}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop3.Common", "Common\WebShop3.Common.csproj", "{CD889983-FE89-4682-B5C5-CAC2F39CE5E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eshopBL", "eshopBL\eshopBL.csproj", "{A7A6C2F4-C12D-4848-8CE8-76D21E2150A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebShop3.BusinessLogic", "eshopBL\WebShop3.BusinessLogic.csproj", "{A7A6C2F4-C12D-4848-8CE8-76D21E2150A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,5 +42,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {850A6A67-91F4-419B-9B26-94D8ED1DA090}
 	EndGlobalSection
 EndGlobal

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace eshopBL
+namespace WebShop3.BusinessLogic
 {
     public class Common
     {

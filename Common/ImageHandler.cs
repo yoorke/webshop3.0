@@ -7,7 +7,7 @@ using System.Drawing.Imaging;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-namespace Common
+namespace WebShop3.Common
 {
     public class ImageHandler
     {

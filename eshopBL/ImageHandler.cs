@@ -9,7 +9,7 @@ using System.Drawing.Drawing2D;
 using System.Web;
 using System.Web.Hosting;
 
-namespace eshopBL
+namespace WebShop3.BusinessLogic
 {
     public class ImageHandler : IImageHandler
     {

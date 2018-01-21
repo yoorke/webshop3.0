@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     [Authorize]
     public class ValuesController : ApiController

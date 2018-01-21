@@ -8,10 +8,10 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
-using eshopAPI.Providers;
-using eshopAPI.Models;
+using WebShop3.API.Providers;
+using WebShop3.API.Models;
 
-namespace eshopAPI
+namespace WebShop3.API
 {
     public partial class Startup
     {

@@ -9,10 +9,10 @@ using System.IO;
 using System.Drawing.Imaging;
 using System.Drawing;
 using System.Web.Hosting;
-using Common;
+using WebShop3.Common;
 using System.Web;
 
-namespace eshopAPI.Controllers
+namespace WebShop3.API.Controllers
 {
     public class CommonController : ApiController
     {

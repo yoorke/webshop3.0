@@ -1,6 +1,6 @@
 using System.Collections.ObjectModel;
 
-namespace eshopAPI.Areas.HelpPage.ModelDescriptions
+namespace WebShop3.API.Areas.HelpPage.ModelDescriptions
 {
     public class ComplexTypeModelDescription : ModelDescription
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using GenericBE;
 
-namespace eshop.Models
+namespace WebShop3.Models
 {
     public class User : BaseEntity
     {

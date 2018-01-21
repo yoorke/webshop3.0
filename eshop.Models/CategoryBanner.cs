@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using GenericBE;
 
-namespace eshop.Models
+namespace WebShop3.Models
 {
     public class CategoryBanner : BaseEntity
     {

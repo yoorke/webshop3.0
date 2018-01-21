@@ -1,6 +1,6 @@
 using System;
 
-namespace eshopAPI.Areas.HelpPage.ModelDescriptions
+namespace WebShop3.API.Areas.HelpPage.ModelDescriptions
 {
     public class ParameterAnnotation
     {
